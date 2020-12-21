@@ -31,6 +31,9 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Refactor livecheck strategies around match regex
 =======
 >>>>>>> Refactor livecheck strategies around match regex
         URL_MATCH_REGEX = %r{
@@ -40,6 +43,7 @@ module Homebrew
           /#{FILENAME_REGEX.source.strip} # The filename
         }ix.freeze
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         URL_MATCH_REGEX = %r{^https?://files\.pythonhosted\.org/packages(?:/[^/]+){4}i}.freeze
 >>>>>>> livecheck: strengthen URL patterns
@@ -48,6 +52,8 @@ module Homebrew
 =======
         URL_MATCH_REGEX = %r{^https?://files\.pythonhosted\.org/packages(?:/[^/]+){4}i}.freeze
 >>>>>>> livecheck: strengthen URL patterns
+=======
+>>>>>>> Refactor livecheck strategies around match regex
 
         # Whether the strategy can be applied to the provided URL.
         #

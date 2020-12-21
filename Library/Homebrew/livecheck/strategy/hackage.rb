@@ -19,6 +19,9 @@ module Homebrew
       class Hackage
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Refactor livecheck strategies around match regex
 =======
 >>>>>>> Refactor livecheck strategies around match regex
         # A `Regexp` used in determining if the strategy applies to the URL and
@@ -35,6 +38,7 @@ module Homebrew
           #{PACKAGE_NAME_REGEX.source.strip}
         }ix.freeze
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         # The `Regexp` used to determine if the strategy applies to the URL.
         URL_MATCH_REGEX = %r{^https?://(?:downloads|hackage)\.haskell\.org(?:/[^/]+){3}}i.freeze
@@ -44,6 +48,8 @@ module Homebrew
 >>>>>>> Refactor livecheck strategies around match regex
 =======
 >>>>>>> livecheck: strengthen URL patterns
+=======
+>>>>>>> Refactor livecheck strategies around match regex
 
         # Whether the strategy can be applied to the provided URL.
         #

@@ -23,6 +23,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Refactor livecheck strategies around match regex
         URL_MATCH_REGEX = %r{
@@ -39,6 +40,13 @@ module Homebrew
 =======
         URL_MATCH_REGEX = %r{^https?://download\.gnome\.org/sources/[^/]+/}i.freeze
 >>>>>>> livecheck: strengthen URL patterns
+=======
+        URL_MATCH_REGEX = %r{
+          ^https?://download\.gnome\.org
+          /sources
+          /(?<package_name>[^/]+)/ # The GNOME package name
+        }ix.freeze
+>>>>>>> Refactor livecheck strategies around match regex
 
         # Whether the strategy can be applied to the provided URL.
         #
@@ -58,6 +66,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           match = url.match(URL_MATCH_REGEX)
 =======
           %r{/sources/(?<package_name>[^/]+)/}i =~ url
@@ -68,6 +77,9 @@ module Homebrew
 =======
           %r{/sources/(?<package_name>[^/]+)/}i =~ url
 >>>>>>> livecheck: strengthen URL patterns
+=======
+          match = url.match(URL_MATCH_REGEX)
+>>>>>>> Refactor livecheck strategies around match regex
 
           page_url = "https://download.gnome.org/sources/#{match[:package_name]}/cache.json"
 
