@@ -92,6 +92,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> update-report: use gitconfig to remember last tag
       old_tag = if (HOMEBREW_REPOSITORY/".git/config").exist?
@@ -127,6 +128,10 @@ module Homebrew
 >>>>>>> update: show either changelog or release noted link
 =======
 >>>>>>> update-report: use gitconfig to remember last tag
+=======
+      tag = Utils.safe_popen_read("git", "tag", "--points-at", "HEAD")
+      new_repository_version = tag.chomp if tag.present?
+>>>>>>> update-report: add links to changelog and blog
     end
 
     Homebrew.failed = true if ENV["HOMEBREW_UPDATE_FAILED"]
@@ -182,6 +187,7 @@ module Homebrew
     ohai "Homebrew was updated to version #{new_repository_version}"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if new_repository_version.split(".").last == "0"
       puts <<~EOS
         More detailed release notes are available on the Homebrew Blog:
@@ -205,6 +211,8 @@ module Homebrew
     end
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> update-report: add links to changelog and blog
     puts <<~EOS
       The changelog can be found at:
         #{Formatter.url("https://github.com/Homebrew/brew/releases/tag/#{new_repository_version}")}
@@ -216,9 +224,12 @@ module Homebrew
       More detailed release notes are available on the Homebrew Blog:
         #{Formatter.url("https://brew.sh/blog/")}
     EOS
+<<<<<<< HEAD
 >>>>>>> update-report: add links to changelog and blog
 =======
 >>>>>>> update: show either changelog or release noted link
+=======
+>>>>>>> update-report: add links to changelog and blog
   end
 
   def shorten_revision(revision)
