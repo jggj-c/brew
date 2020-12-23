@@ -99,6 +99,7 @@ module Homebrew
     $stderr.puts "Release notes between #{previous_tag} and #{end_ref}:"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if args.markdown? && args.named.first
       puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
     end
@@ -110,6 +111,9 @@ module Homebrew
       puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
     end
 >>>>>>> release-notes: only show blog link when previous_tag passed
+=======
+    puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
+>>>>>>> release-notes: add message directing users to the blog.
     puts output
   end
 end
