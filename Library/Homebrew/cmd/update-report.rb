@@ -95,6 +95,9 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> update-report: use gitconfig to remember last tag
 =======
 >>>>>>> update-report: use gitconfig to remember last tag
 =======
@@ -109,6 +112,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname", "*.*"
 =======
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname"
@@ -116,6 +120,9 @@ module Homebrew
 =======
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname", "*.*"
 >>>>>>> cmd/update-report: fix to show new tag
+=======
+        "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname"
+>>>>>>> update-report: use gitconfig to remember last tag
 =======
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname"
 >>>>>>> update-report: use gitconfig to remember last tag
@@ -128,6 +135,7 @@ module Homebrew
       end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       tag = Utils.safe_popen_read("git", "tag", "--points-at", "HEAD")
       new_repository_version = tag.chomp if tag.present?
@@ -144,6 +152,8 @@ module Homebrew
 =======
       new_repository_version = Utils.safe_popen_read("git", "tag", "--points-at", "HEAD").chomp.presence
 >>>>>>> update: show either changelog or release noted link
+=======
+>>>>>>> update-report: use gitconfig to remember last tag
 =======
 >>>>>>> update-report: use gitconfig to remember last tag
     end
