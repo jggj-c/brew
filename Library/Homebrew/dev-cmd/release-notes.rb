@@ -100,6 +100,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if args.markdown? && args.named.first
       puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
     end
@@ -114,6 +115,11 @@ module Homebrew
 =======
     puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
 >>>>>>> release-notes: add message directing users to the blog.
+=======
+    if args.markdown? && args.named.first
+      puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
+    end
+>>>>>>> release-notes: only show blog link when previous_tag passed
     puts output
   end
 end
