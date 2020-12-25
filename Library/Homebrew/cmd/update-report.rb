@@ -91,6 +91,9 @@ module Homebrew
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> update-report: use gitconfig to remember last tag
       old_tag = if (HOMEBREW_REPOSITORY/".git/config").exist?
         Utils.popen_read(
           "git", "config", "--file=#{HOMEBREW_REPOSITORY}/.git/config", "--get", "homebrew.latesttag"
@@ -98,7 +101,11 @@ module Homebrew
       end
 
       new_tag = Utils.popen_read(
+<<<<<<< HEAD
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname", "*.*"
+=======
+        "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname"
+>>>>>>> update-report: use gitconfig to remember last tag
       ).lines.first.chomp
 
       if new_tag != old_tag
@@ -106,6 +113,7 @@ module Homebrew
                "--replace-all", "homebrew.latesttag", new_tag
         new_repository_version = new_tag
       end
+<<<<<<< HEAD
 =======
       tag = Utils.safe_popen_read("git", "tag", "--points-at", "HEAD")
       new_repository_version = tag.chomp if tag.present?
@@ -113,6 +121,8 @@ module Homebrew
 =======
       new_repository_version = Utils.safe_popen_read("git", "tag", "--points-at", "HEAD").chomp.presence
 >>>>>>> update: show either changelog or release noted link
+=======
+>>>>>>> update-report: use gitconfig to remember last tag
     end
 
     Homebrew.failed = true if ENV["HOMEBREW_UPDATE_FAILED"]
