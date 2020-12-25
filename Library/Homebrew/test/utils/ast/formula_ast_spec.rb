@@ -19,8 +19,27 @@ describe Utils::AST::FormulaAST do
 
   describe "#replace_stanza" do
     it "replaces the specified stanza in a formula" do
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
       formula_ast.replace_stanza(:license, :public_domain)
       expect(formula_ast.process).to eq <<~RUBY
+=======
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast_spec.rb
+      contents = initial_formula.dup
+<<<<<<< HEAD
+<<<<<<< HEAD
+      described_class.replace_formula_stanza!(contents, :license, :public_domain)
+=======
+      described_class.replace_formula_stanza!(contents, :license, "license :public_domain")
+>>>>>>> utils/ast: cleanup
+=======
+      described_class.replace_formula_stanza!(contents, :license, :public_domain)
+>>>>>>> utils/ast: add `stanza_text` helper function
+      expect(contents).to eq <<~RUBY
+=======
+      formula_ast.replace_stanza(:license, :public_domain)
+      expect(formula_ast.process).to eq <<~RUBY
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3:Library/Homebrew/test/utils/ast_spec.rb
         class Foo < Formula
           url "https://brew.sh/foo-1.0.tar.gz"
           license :public_domain
@@ -31,8 +50,27 @@ describe Utils::AST::FormulaAST do
 
   describe "#add_stanza" do
     it "adds the specified stanza to a formula" do
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
       formula_ast.add_stanza(:revision, 1)
       expect(formula_ast.process).to eq <<~RUBY
+=======
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast_spec.rb
+      contents = initial_formula.dup
+<<<<<<< HEAD
+<<<<<<< HEAD
+      described_class.add_formula_stanza!(contents, :revision, 1)
+=======
+      described_class.add_formula_stanza!(contents, :revision, "revision 1")
+>>>>>>> utils/ast: cleanup
+=======
+      described_class.add_formula_stanza!(contents, :revision, 1)
+>>>>>>> utils/ast: add `stanza_text` helper function
+      expect(contents).to eq <<~RUBY
+=======
+      formula_ast.add_stanza(:revision, 1)
+      expect(formula_ast.process).to eq <<~RUBY
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3:Library/Homebrew/test/utils/ast_spec.rb
         class Foo < Formula
           url "https://brew.sh/foo-1.0.tar.gz"
           license all_of: [
@@ -46,7 +84,68 @@ describe Utils::AST::FormulaAST do
     end
   end
 
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
   describe "#add_bottle_block" do
+=======
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast_spec.rb
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> utils/ast: add `stanza_text` helper function
+  describe ".stanza_text" do
+    let(:compound_license) do
+      <<~RUBY.chomp
+        license all_of: [
+          :public_domain,
+          "MIT",
+          "GPL-3.0-or-later" => { with: "Autoconf-exception-3.0" },
+        ]
+      RUBY
+    end
+
+    it "accepts existing stanza text" do
+      expect(described_class.stanza_text(:revision, "revision 1")).to eq("revision 1")
+      expect(described_class.stanza_text(:license, "license :public_domain")).to eq("license :public_domain")
+      expect(described_class.stanza_text(:license, 'license "MIT"')).to eq('license "MIT"')
+      expect(described_class.stanza_text(:license, compound_license)).to eq(compound_license)
+    end
+
+    it "accepts a number as the stanza value" do
+      expect(described_class.stanza_text(:revision, 1)).to eq("revision 1")
+    end
+
+    it "accepts a symbol as the stanza value" do
+      expect(described_class.stanza_text(:license, :public_domain)).to eq("license :public_domain")
+    end
+
+    it "accepts a string as the stanza value" do
+      expect(described_class.stanza_text(:license, "MIT")).to eq('license "MIT"')
+    end
+
+    it "adds indent to stanza text if specified" do
+      expect(described_class.stanza_text(:revision, "revision 1", indent: 2)).to eq("  revision 1")
+      expect(described_class.stanza_text(:license, 'license "MIT"', indent: 2)).to eq('  license "MIT"')
+      expect(described_class.stanza_text(:license, compound_license, indent: 2)).to eq(compound_license.indent(2))
+    end
+
+    it "does not add indent if already indented" do
+      expect(described_class.stanza_text(:revision, "  revision 1", indent: 2)).to eq("  revision 1")
+      expect(
+        described_class.stanza_text(:license, compound_license.indent(2), indent: 2),
+      ).to eq(compound_license.indent(2))
+    end
+  end
+
+<<<<<<< HEAD
+=======
+>>>>>>> utils/ast: cleanup
+=======
+>>>>>>> utils/ast: add `stanza_text` helper function
+  describe ".add_bottle_stanza!" do
+=======
+  describe "#add_bottle_block" do
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3:Library/Homebrew/test/utils/ast_spec.rb
     let(:bottle_output) do
       <<~RUBY.chomp.indent(2)
         bottle do

@@ -20,10 +20,20 @@ module Homebrew
         NICE_NAME = "npm"
 
         # The `Regexp` used to determine if the strategy applies to the URL.
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Refactor livecheck strategies around match regex
         URL_MATCH_REGEX = %r{
           ^https?://registry\.npmjs\.org
           /(?<package_name>.+?)/-/ # The npm package name
         }ix.freeze
+<<<<<<< HEAD
+=======
+        URL_MATCH_REGEX = %r{^https?://registry\.npmjs\.org(?:/[^/]+)?/[^/]+/-/}i.freeze
+>>>>>>> livecheck: strengthen URL patterns
+=======
+>>>>>>> Refactor livecheck strategies around match regex
 
         # Whether the strategy can be applied to the provided URL.
         #
@@ -40,7 +50,15 @@ module Homebrew
         # @param regex [Regexp] a regex used for matching versions in content
         # @return [Hash]
         def self.find_versions(url, regex = nil, &block)
+<<<<<<< HEAD
+<<<<<<< HEAD
           match = url.match(URL_MATCH_REGEX)
+=======
+          %r{registry\.npmjs\.org/(?<package_name>(?:[^/]+/)?[^/]+)/-/}i =~ url
+>>>>>>> livecheck: strengthen URL patterns
+=======
+          match = url.match(URL_MATCH_REGEX)
+>>>>>>> Refactor livecheck strategies around match regex
 
           page_url = "https://www.npmjs.com/package/#{match[:package_name]}?activeTab=versions"
 

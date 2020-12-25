@@ -18,7 +18,23 @@ module Homebrew
         If no <previous_tag> is provided it defaults to the latest tag.
         If no <end_ref> is provided it defaults to `origin/master`.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         If `--markdown` and a <previous_tag> are passed, an extra line containing
+=======
+        If `--markdown` and a <previous_tag> are passed, an extra line containg
+>>>>>>> release-notes: show warning on recent major/minor tag
+=======
+        If `--markdown` and a <previous_tag> are passed, an extra line containing
+>>>>>>> release-notes: clarify help text and minor refactor
+=======
+        If `--markdown` and a <previous_tag> are passed, an extra line containg
+>>>>>>> release-notes: show warning on recent major/minor tag
+=======
+        If `--markdown` and a <previous_tag> are passed, an extra line containing
+>>>>>>> release-notes: clarify help text and minor refactor
         a link to the Homebrew blog will be adding to the output. Additionally,
         a warning will be shown if the latest minor release was less than one month ago.
       EOS
@@ -35,12 +51,46 @@ module Homebrew
     previous_tag = args.named.first
 
     if previous_tag.present?
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       most_recent_major_minor_tag = previous_tag.sub(/\d+$/, "0")
       one_month_ago = Date.today << 1
       previous_tag_date = Date.parse Utils.popen_read(
         "git", "-C", HOMEBREW_REPOSITORY, "log", "-1", "--format=%aI", most_recent_major_minor_tag
       )
       opoo "The latest major/minor release was less than one month ago." if previous_tag_date > one_month_ago
+=======
+
+=======
+      most_recent_major_minor_tag = previous_tag.sub(/\d+$/, "0")
+      one_month_ago = Date.today << 1
+>>>>>>> release-notes: clarify help text and minor refactor
+      previous_tag_date = Date.parse Utils.popen_read(
+        "git", "-C", HOMEBREW_REPOSITORY, "log", "-1", "--format=%aI", most_recent_major_minor_tag
+      )
+<<<<<<< HEAD
+      opoo "The latest major/minor release was less than one month ago." if previous_tag_date > (Date.today << 1)
+>>>>>>> release-notes: show warning on recent major/minor tag
+=======
+      opoo "The latest major/minor release was less than one month ago." if previous_tag_date > one_month_ago
+>>>>>>> release-notes: clarify help text and minor refactor
+=======
+
+=======
+      most_recent_major_minor_tag = previous_tag.sub(/\d+$/, "0")
+      one_month_ago = Date.today << 1
+>>>>>>> release-notes: clarify help text and minor refactor
+      previous_tag_date = Date.parse Utils.popen_read(
+        "git", "-C", HOMEBREW_REPOSITORY, "log", "-1", "--format=%aI", most_recent_major_minor_tag
+      )
+<<<<<<< HEAD
+      opoo "The latest major/minor release was less than one month ago." if previous_tag_date > (Date.today << 1)
+>>>>>>> release-notes: show warning on recent major/minor tag
+=======
+      opoo "The latest major/minor release was less than one month ago." if previous_tag_date > one_month_ago
+>>>>>>> release-notes: clarify help text and minor refactor
     end
 
     previous_tag ||= Utils.popen_read(
@@ -72,9 +122,29 @@ module Homebrew
     end
 
     $stderr.puts "Release notes between #{previous_tag} and #{end_ref}:"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     if args.markdown? && args.named.first
       puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
     end
+=======
+    puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
+>>>>>>> release-notes: add message directing users to the blog.
+=======
+    if args.markdown? && args.named.first
+      puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
+    end
+>>>>>>> release-notes: only show blog link when previous_tag passed
+=======
+    puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
+>>>>>>> release-notes: add message directing users to the blog.
+=======
+    if args.markdown? && args.named.first
+      puts "Release notes for major and minor releases can be found in the [Homebrew blog](https://brew.sh/blog/)."
+    end
+>>>>>>> release-notes: only show blog link when previous_tag passed
     puts output
   end
 end

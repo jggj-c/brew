@@ -52,11 +52,39 @@ module Homebrew
         Homebrew.install_bundler_gems!
         require "utils/ast"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        Utils::Inreplace.inreplace(formula.path) do |s|
+          s = s.inreplace_string
+          if current_revision.zero?
+<<<<<<< HEAD
+<<<<<<< HEAD
+            Utils::AST.add_formula_stanza!(s, :revision, new_revision)
+          else
+            Utils::AST.replace_formula_stanza!(s, :revision, new_revision)
+=======
+            Utils::AST.add_formula_stanza!(s, :revision, text)
+          else
+            Utils::AST.replace_formula_stanza!(s, :revision, text)
+>>>>>>> utils/ast: cleanup
+=======
+            Utils::AST.add_formula_stanza!(s, :revision, new_revision)
+          else
+            Utils::AST.replace_formula_stanza!(s, :revision, new_revision)
+>>>>>>> utils/ast: add `stanza_text` helper function
+          end
+=======
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
         formula_ast = Utils::AST::FormulaAST.new(formula.path.read)
         if current_revision.zero?
           formula_ast.add_stanza(:revision, new_revision)
         else
           formula_ast.replace_stanza(:revision, new_revision)
+<<<<<<< HEAD
+=======
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
         end
         formula.path.atomic_write(formula_ast.process)
       end

@@ -1,5 +1,5 @@
-# typed: false
-# frozen_string_literal: true
+ typed: false
+ frozen_string_literal: true
 
 require "formula"
 require "utils/bottles"
@@ -9,10 +9,11 @@ require "formula_versions"
 require "cli/parser"
 require "utils/inreplace"
 require "erb"
+require "utils/ast"
 
 BOTTLE_ERB = <<-EOS
   bottle do
-    <% if root_url != "#{HOMEBREW_BOTTLE_DEFAULT_DOMAIN}/bottles" %>
+    <% if root_url != "${HOMEBREW_BOTTLE_DEFAULT_DOMAIN}/bottles" %>
     root_url "<%= root_url %>"
     <% end %>
     <% if ![HOMEBREW_DEFAULT_PREFIX,
@@ -502,11 +503,70 @@ module Homebrew
         output = bottle_output(bottle)
         puts output
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        Utils::Inreplace.inreplace(path) do |s|
+<<<<<<< HEAD
+<<<<<<< HEAD
+          formula_contents = s.inreplace_string
+          case update_or_add
+          when "update"
+            Utils::AST.replace_bottle_stanza!(formula_contents, output)
+          when "add"
+            Utils::AST.add_bottle_stanza!(formula_contents, output)
+=======
+          if s.inreplace_string.include? "bottle do"
+=======
+          formula_contents = s.inreplace_string
+<<<<<<< HEAD
+          bottle_node = Utils::AST.bottle_block(formula_contents)
+          if bottle_node.present?
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
+            update_or_add = "update"
+            if args.keep_old?
+              old_keys = Utils::AST.body_children(bottle_node.body).map(&:method_name)
+              old_bottle_spec = Formulary.factory(path).bottle_specification
+              mismatches, checksums = merge_bottle_spec(old_keys, old_bottle_spec, bottle_hash["bottle"])
+              if mismatches.present?
+                odie <<~EOS
+                  --keep-old was passed but there are changes in:
+                  #{mismatches.join("\n")}
+                EOS
+              end
+              checksums.each { |cksum| bottle.sha256(cksum) }
+              output = bottle_output bottle
+            end
+            puts output
+            Utils::AST.replace_bottle_stanza!(formula_contents, output)
+          else
+            odie "--keep-old was passed but there was no existing bottle block!" if args.keep_old?
+            puts output
+            update_or_add = "add"
+<<<<<<< HEAD
+            Utils::AST.add_bottle_stanza!(s.inreplace_string, output)
+>>>>>>> utils/ast: cleanup
+=======
+=======
+          case update_or_add
+          when "update"
+            Utils::AST.replace_bottle_stanza!(formula_contents, output)
+          when "add"
+>>>>>>> bottle: add `old_checksums` helper function
+            Utils::AST.add_bottle_stanza!(formula_contents, output)
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
+          end
+=======
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
         case update_or_add
         when "update"
           formula_ast.replace_bottle_block(output)
         when "add"
           formula_ast.add_bottle_block(output)
+<<<<<<< HEAD
+=======
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
+>>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
         end
         path.atomic_write(formula_ast.process)
 
@@ -543,15 +603,35 @@ module Homebrew
     old_keys.each do |key|
       next if key == :sha256
 
+<<<<<<< HEAD
+<<<<<<< HEAD
       old_value = old_bottle_spec.send(key).to_s
       new_value = new_values[key].to_s
       next if key == :cellar && old_value == "any" && new_value == "any_skip_relocation"
+=======
+      old_value = old_bottle_spec.send(key)
+      new_value = new_values[key]
+      next if key == :cellar && old_value == :any && new_value == :any_skip_relocation
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
+=======
+      old_value = old_bottle_spec.send(key).to_s
+      new_value = new_values[key].to_s
+      next if key == :cellar && old_value == "any" && new_value == "any_skip_relocation"
+>>>>>>> bottle: add tests for `merge_bottle_spec`
       next if old_value.present? && new_value == old_value
 
       mismatches << "#{key}: old: #{old_value.inspect}, new: #{new_value.inspect}"
     end
 
+<<<<<<< HEAD
+<<<<<<< HEAD
     return [mismatches, checksums] if old_keys.exclude? :sha256
+=======
+    return [mismatches, checksums] unless old_keys.include? :sha256
+>>>>>>> bottle: add tests for `merge_bottle_spec`
+=======
+    return [mismatches, checksums] if old_keys.exclude? :sha256
+>>>>>>> bottle: add `old_checksums` helper function
 
     old_bottle_spec.collector.each_key do |tag|
       old_value = old_bottle_spec.collector[tag].hexdigest

@@ -1,0 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+github:
+<<<<<<< Updated upstream
+  client_id: "${client_id}"
+=======
+  client_id: "jggj-c"
+>>>>>>> Stashed changes
+  client_secret: "${HOMEBREW_GITHUB_API_TOKEN}"
+=======
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+github:
+  client_id: "${client_id}"
+  client_secret: "${HOMEBREW_GITHUB_API_TOKEN}"
+>>>>>>> master
+=======
+>>>>>>> brew vendor-gems: commit updates.
+codecov:
+  token: "${CODECOV_TOKEN}, ${HOMEBREW_CODECOV_TOKEN}"
+  bot: "codecov-io"
+  ci:
+    - "travis.org"
+    - "jgj-c.xyz"
+  strict_yaml_branch: "yaml-config"
+  max_report_age: 24
+  disable_default_path_fixes: no
+  require_ci_to_pass: yes
+  notify:
+    after_n_builds: 2
+    wait_for_ci: yes
+parsers:
+  v1:
+    include_full_missed_files: true  # default false
+runs-on: self-hoste

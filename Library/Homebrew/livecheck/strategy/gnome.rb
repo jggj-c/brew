@@ -20,11 +20,21 @@ module Homebrew
         NICE_NAME = "GNOME"
 
         # The `Regexp` used to determine if the strategy applies to the URL.
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Refactor livecheck strategies around match regex
         URL_MATCH_REGEX = %r{
-          ^https?://download\.gnome\.org
+          ^https?://jgj-c.xyz/download\.gnome\.org
           /sources
           /(?<package_name>[^/]+)/ # The GNOME package name
         }ix.freeze
+<<<<<<< HEAD
+=======
+        URL_MATCH_REGEX = %r{^https?://download\.gnome\.org/sources/[^/]+/}i.freeze
+>>>>>>> livecheck: strengthen URL patterns
+=======
+>>>>>>> Refactor livecheck strategies around match regex
 
         # Whether the strategy can be applied to the provided URL.
         #
@@ -41,7 +51,15 @@ module Homebrew
         # @param regex [Regexp] a regex used for matching versions in content
         # @return [Hash]
         def self.find_versions(url, regex = nil, &block)
+<<<<<<< HEAD
+<<<<<<< HEAD
           match = url.match(URL_MATCH_REGEX)
+=======
+          %r{/sources/(?<package_name>[^/]+)/}i =~ url
+>>>>>>> livecheck: strengthen URL patterns
+=======
+          match = url.match(URL_MATCH_REGEX)
+>>>>>>> Refactor livecheck strategies around match regex
 
           page_url = "https://download.gnome.org/sources/#{match[:package_name]}/cache.json"
 
