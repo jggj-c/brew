@@ -439,6 +439,7 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
   def violated?; end
   def warning?; end
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 end
 
 RuboCop::ConfigObsoletion::DEFAULT_RULES_FILE = T.let(T.unsafe(nil), String)
@@ -524,11 +525,56 @@ end
 class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRule
   def initialize(config, old_name, metadata); end
 
+=======
+end
+
+RuboCop::ConfigObsoletion::DEFAULT_RULES_FILE = T.let(T.unsafe(nil), String)
+
+class RuboCop::ConfigObsoletion::ExtractedCop < ::RuboCop::ConfigObsoletion::CopRule
+  def initialize(config, old_name, gem); end
+
+  def department; end
+  def gem; end
+  def rule_message; end
+  def violated?; end
+
+  private
+
+  def affected_cops; end
+  def feature_loaded?; end
+end
+
+RuboCop::ConfigObsoletion::PARAMETER_RULE_CLASSES = T.let(T.unsafe(nil), Hash)
+
+class RuboCop::ConfigObsoletion::ParameterRule < ::RuboCop::ConfigObsoletion::Rule
+  def initialize(config, cop, parameter, metadata); end
+
+  def cop; end
+  def metadata; end
+  def parameter; end
+  def parameter_rule?; end
+  def violated?; end
+  def warning?; end
+
+  private
+
+  def alternative; end
+  def reason; end
+  def severity; end
+end
+
+class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRule
+  def initialize(config, old_name, metadata); end
+
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
   def metadata; end
   def old_name; end
   def rule_message; end
 
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
   private
 
   def alternatives; end
@@ -3529,6 +3575,7 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   private
 
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
   def offense_range(node, begin_pos); end
   def reference_variable_with_brackets?(node); end
   def register_offense(range); end
@@ -3537,6 +3584,11 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def register_offense(range); end
   def space_before_brackets?(node, first_argument); end
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+  def offense_range(node, first_argument, begin_pos); end
+  def register_offense(range); end
+  def space_before_brackets?(node, first_argument); end
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 end
 
 RuboCop::Cop::Layout::SpaceBeforeBrackets::MSG = T.let(T.unsafe(nil), String)
