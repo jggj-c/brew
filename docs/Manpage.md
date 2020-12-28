@@ -1204,10 +1204,14 @@ If no *`previous_tag`* is provided it defaults to the latest tag.
 If no *`end_ref`* is provided it defaults to `origin/master`.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 If `--markdown` and a *`previous_tag`* are passed, an extra line containing
 =======
 If `--markdown` and a *`previous_tag`* are passed, an extra line containg
 >>>>>>> release-notes: show warning on recent major/minor tag
+=======
+If `--markdown` and a *`previous_tag`* are passed, an extra line containing
+>>>>>>> release-notes: clarify help text and minor refactor
 a link to the Homebrew blog will be adding to the output. Additionally,
 a warning will be shown if the latest minor release was less than one month ago.
 
