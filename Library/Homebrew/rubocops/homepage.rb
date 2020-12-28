@@ -92,10 +92,13 @@ module RuboCop
             homepage = string_content(node).dup
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             return if homepage.nil? || homepage.empty?
 
 =======
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
+=======
+>>>>>>> rubocops/homepage: fix frozen string error.
 =======
 >>>>>>> rubocops/homepage: fix frozen string error.
             homepage.sub!("readthedocs.org", "readthedocs.io")
