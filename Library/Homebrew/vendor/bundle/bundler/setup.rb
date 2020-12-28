@@ -120,6 +120,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> jggj-c
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
@@ -146,6 +147,8 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.8.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.2/lib"
 >>>>>>> brew vendor-gems: commit updates.
 =======
+=======
+>>>>>>> brew vendor-gems: commit updates.
 =======
 >>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.1/lib"
