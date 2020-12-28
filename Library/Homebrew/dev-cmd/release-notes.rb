@@ -22,6 +22,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         If `--markdown` and a <previous_tag> are passed, an extra line containing
 =======
         If `--markdown` and a <previous_tag> are passed, an extra line containg
@@ -35,6 +36,9 @@ module Homebrew
 =======
         If `--markdown` and a <previous_tag> are passed, an extra line containing
 >>>>>>> release-notes: clarify help text and minor refactor
+=======
+        If `--markdown` and a <previous_tag> are passed, an extra line containg
+>>>>>>> release-notes: show warning on recent major/minor tag
         a link to the Homebrew blog will be adding to the output. Additionally,
         a warning will be shown if the latest minor release was less than one month ago.
       EOS
@@ -55,6 +59,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       most_recent_major_minor_tag = previous_tag.sub(/\d+$/, "0")
       one_month_ago = Date.today << 1
       previous_tag_date = Date.parse Utils.popen_read(
@@ -91,6 +96,13 @@ module Homebrew
 =======
       opoo "The latest major/minor release was less than one month ago." if previous_tag_date > one_month_ago
 >>>>>>> release-notes: clarify help text and minor refactor
+=======
+
+      previous_tag_date = Date.parse Utils.popen_read(
+        "git", "-C", HOMEBREW_REPOSITORY, "log", "-1", "--format=%aI", previous_tag.sub(/\d+$/, "0")
+      )
+      opoo "The latest major/minor release was less than one month ago." if previous_tag_date > (Date.today << 1)
+>>>>>>> release-notes: show warning on recent major/minor tag
     end
 
     previous_tag ||= Utils.popen_read(
