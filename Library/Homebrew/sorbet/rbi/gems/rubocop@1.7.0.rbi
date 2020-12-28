@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -15,6 +16,8 @@
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 # DO NOT EDIT MANUALLY
@@ -199,6 +202,7 @@ class RuboCop::CommentConfig
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   def comment_only_line?(line_number); end
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -214,6 +218,9 @@ class RuboCop::CommentConfig
 =======
   def comment_only_line?(line_number); end
 >>>>>>> brew vendor-gems: commit updates.
+=======
+  def comment_only_line?(line_number); end
+>>>>>>> Update RBI files for rubocop.
 =======
   def comment_only_line?(line_number); end
 >>>>>>> Update RBI files for rubocop.
@@ -236,6 +243,7 @@ class RuboCop::CommentConfig
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   def comment_only_line?(line_number); end
 >>>>>>> Update RBI files for rubocop.
@@ -247,6 +255,8 @@ class RuboCop::CommentConfig
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
   def cop_line_ranges(analysis); end
@@ -473,16 +483,23 @@ class RuboCop::ConfigObsoletion
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
 =======
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> Update RBI files for rubocop.
 end
 
@@ -519,6 +536,7 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -539,15 +557,25 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> brew vendor-gems: commit updates.
+=======
+=======
+>>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+>>>>>>> Update RBI files for rubocop.
 =======
 =======
 >>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
@@ -602,10 +630,13 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -654,12 +685,16 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -718,6 +753,7 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
   def violated?; end
   def warning?; end
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
 end
 
@@ -751,7 +787,65 @@ class RuboCop::ConfigObsoletion::ParameterRule < ::RuboCop::ConfigObsoletion::Ru
   def initialize(config, cop, parameter, metadata); end
 
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+>>>>>>> Update RBI files for rubocop.
 =======
+end
+
+RuboCop::ConfigObsoletion::DEFAULT_RULES_FILE = T.let(T.unsafe(nil), String)
+
+class RuboCop::ConfigObsoletion::ExtractedCop < ::RuboCop::ConfigObsoletion::CopRule
+  def initialize(config, old_name, gem); end
+
+  def department; end
+  def gem; end
+  def rule_message; end
+  def violated?; end
+
+  private
+
+  def affected_cops; end
+  def feature_loaded?; end
+end
+
+RuboCop::ConfigObsoletion::PARAMETER_RULE_CLASSES = T.let(T.unsafe(nil), Hash)
+
+class RuboCop::ConfigObsoletion::ParameterRule < ::RuboCop::ConfigObsoletion::Rule
+  def initialize(config, cop, parameter, metadata); end
+
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+end
+
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
+RuboCop::ConfigObsoletion::COP_RULE_CLASSES = T.let(T.unsafe(nil), Hash)
+
+class RuboCop::ConfigObsoletion::ChangedEnforcedStyles < ::RuboCop::ConfigObsoletion::ParameterRule
+  def message; end
+  def violated?; end
+
+  private
+
+  def value; end
+end
+
+RuboCop::ConfigObsoletion::ChangedEnforcedStyles::BASE_MESSAGE = T.let(T.unsafe(nil), String)
+
+class RuboCop::ConfigObsoletion::ChangedParameter < ::RuboCop::ConfigObsoletion::ParameterRule
+  def message; end
+end
+
+RuboCop::ConfigObsoletion::ChangedParameter::BASE_MESSAGE = T.let(T.unsafe(nil), String)
+
+class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
+  def initialize(config, old_name); end
+
+  def cop_rule?; end
+  def message; end
+  def old_name; end
+  def violated?; end
+  def warning?; end
 end
 
 >>>>>>> Update RBI files for rubocop.
@@ -779,11 +873,15 @@ class RuboCop::ConfigObsoletion::ParameterRule < ::RuboCop::ConfigObsoletion::Ru
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -808,6 +906,7 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -819,17 +918,29 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
 =======
 =======
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+=======
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -842,6 +953,7 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -851,15 +963,22 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> Update RBI files for rubocop.
 =======
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> Update RBI files for rubocop.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
@@ -876,10 +995,13 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -887,8 +1009,15 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 >>>>>>> brew vendor-gems: commit updates.
 =======
 =======
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+=======
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -1048,6 +1177,7 @@ end
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -1056,6 +1186,8 @@ end
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 module RuboCop::Cop::AllowedIdentifiers
@@ -1070,6 +1202,7 @@ RuboCop::Cop::AllowedIdentifiers::SIGILS = T.let(T.unsafe(nil), String)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -1080,6 +1213,8 @@ RuboCop::Cop::AllowedIdentifiers::SIGILS = T.let(T.unsafe(nil), String)
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 module RuboCop::Cop::AllowedMethods
@@ -3930,6 +4065,7 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -3947,12 +4083,18 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 >>>>>>> brew vendor-gems: commit updates.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> Update RBI files for rubocop.
   def offense_range(node, begin_pos); end
   def reference_variable_with_brackets?(node); end
@@ -3961,6 +4103,7 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def offense_range(node, first_argument, begin_pos); end
   def register_offense(range); end
   def space_before_brackets?(node, first_argument); end
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3994,6 +4137,8 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
 =======
+=======
+>>>>>>> Update RBI files for rubocop.
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
   def offense_range(node, first_argument, begin_pos); end
@@ -4003,6 +4148,9 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 =======
 =======
 >>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> Update RBI files for rubocop.
   def offense_range(node, begin_pos); end
   def reference_variable_with_brackets?(node); end
@@ -4013,6 +4161,10 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def space_before_brackets?(node, first_argument); end
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
+>>>>>>> Update RBI files for rubocop.
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -4023,13 +4175,24 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def space_before_brackets?(node, first_argument); end
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> brew vendor-gems: commit updates.
 =======
 =======
+>>>>>>> Update RBI files for rubocop.
+=======
 >>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+=======
+  def offense_range(node, first_argument, begin_pos); end
+  def register_offense(range); end
+  def space_before_brackets?(node, first_argument); end
+>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
+>>>>>>> Update RBI files for rubocop.
+=======
 =======
   def offense_range(node, first_argument, begin_pos); end
   def register_offense(range); end
@@ -4607,6 +4770,7 @@ RuboCop::Cop::Lint::DeprecatedClassMethods::RESTRICT_ON_SEND = T.let(T.unsafe(ni
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -4615,6 +4779,8 @@ RuboCop::Cop::Lint::DeprecatedClassMethods::RESTRICT_ON_SEND = T.let(T.unsafe(ni
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Lint::DeprecatedConstants < ::RuboCop::Cop::Base
@@ -4638,6 +4804,7 @@ RuboCop::Cop::Lint::DeprecatedConstants::SUGGEST_GOOD_MSG = T.let(T.unsafe(nil),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -4648,6 +4815,8 @@ RuboCop::Cop::Lint::DeprecatedConstants::SUGGEST_GOOD_MSG = T.let(T.unsafe(nil),
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Lint::DeprecatedOpenSSLConstant < ::RuboCop::Cop::Base
@@ -5130,6 +5299,7 @@ RuboCop::Cop::Lint::InterpolationCheck::MSG = T.let(T.unsafe(nil), String)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -5138,6 +5308,8 @@ RuboCop::Cop::Lint::InterpolationCheck::MSG = T.let(T.unsafe(nil), String)
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Lint::LambdaWithoutLiteralBlock < ::RuboCop::Cop::Base
@@ -5155,6 +5327,7 @@ RuboCop::Cop::Lint::LambdaWithoutLiteralBlock::RESTRICT_ON_SEND = T.let(T.unsafe
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -5165,6 +5338,8 @@ RuboCop::Cop::Lint::LambdaWithoutLiteralBlock::RESTRICT_ON_SEND = T.let(T.unsafe
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Lint::LiteralAsCondition < ::RuboCop::Cop::Base
@@ -5594,6 +5769,7 @@ RuboCop::Cop::Lint::RedundantCopEnableDirective::MSG = T.let(T.unsafe(nil), Stri
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -5602,6 +5778,8 @@ RuboCop::Cop::Lint::RedundantCopEnableDirective::MSG = T.let(T.unsafe(nil), Stri
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Lint::RedundantDirGlobSort < ::RuboCop::Cop::Base
@@ -5622,6 +5800,7 @@ RuboCop::Cop::Lint::RedundantDirGlobSort::RESTRICT_ON_SEND = T.let(T.unsafe(nil)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -5632,6 +5811,8 @@ RuboCop::Cop::Lint::RedundantDirGlobSort::RESTRICT_ON_SEND = T.let(T.unsafe(nil)
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Lint::RedundantRequireStatement < ::RuboCop::Cop::Base
@@ -7068,6 +7249,7 @@ class RuboCop::Cop::Naming::VariableName < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   include(::RuboCop::Cop::AllowedIdentifiers)
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -7083,6 +7265,9 @@ class RuboCop::Cop::Naming::VariableName < ::RuboCop::Cop::Base
 =======
   include(::RuboCop::Cop::AllowedIdentifiers)
 >>>>>>> brew vendor-gems: commit updates.
+=======
+  include(::RuboCop::Cop::AllowedIdentifiers)
+>>>>>>> Update RBI files for rubocop.
 =======
   include(::RuboCop::Cop::AllowedIdentifiers)
 >>>>>>> Update RBI files for rubocop.
@@ -7116,6 +7301,7 @@ class RuboCop::Cop::Naming::VariableNumber < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   include(::RuboCop::Cop::AllowedIdentifiers)
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -7131,6 +7317,9 @@ class RuboCop::Cop::Naming::VariableNumber < ::RuboCop::Cop::Base
 =======
   include(::RuboCop::Cop::AllowedIdentifiers)
 >>>>>>> brew vendor-gems: commit updates.
+=======
+  include(::RuboCop::Cop::AllowedIdentifiers)
+>>>>>>> Update RBI files for rubocop.
 =======
   include(::RuboCop::Cop::AllowedIdentifiers)
 >>>>>>> Update RBI files for rubocop.
@@ -7154,6 +7343,7 @@ class RuboCop::Cop::Naming::VariableNumber < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   def allowed_identifier?(name); end
   def allowed_identifiers; end
@@ -7166,6 +7356,8 @@ class RuboCop::Cop::Naming::VariableNumber < ::RuboCop::Cop::Base
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
   def message(style); end
@@ -8780,6 +8972,7 @@ RuboCop::Cop::Style::EndBlock::MSG = T.let(T.unsafe(nil), String)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -8788,6 +8981,8 @@ RuboCop::Cop::Style::EndBlock::MSG = T.let(T.unsafe(nil), String)
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Style::EndlessMethod < ::RuboCop::Cop::Base
@@ -8816,6 +9011,7 @@ RuboCop::Cop::Style::EndlessMethod::MSG_MULTI_LINE = T.let(T.unsafe(nil), String
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -8826,6 +9022,8 @@ RuboCop::Cop::Style::EndlessMethod::MSG_MULTI_LINE = T.let(T.unsafe(nil), String
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::Cop::Style::EvalWithLocation < ::RuboCop::Cop::Base
@@ -9282,6 +9480,7 @@ class RuboCop::Cop::Style::IfInsideElse < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   def find_end_range(node); end
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -9297,6 +9496,9 @@ class RuboCop::Cop::Style::IfInsideElse < ::RuboCop::Cop::Base
 =======
   def find_end_range(node); end
 >>>>>>> brew vendor-gems: commit updates.
+=======
+  def find_end_range(node); end
+>>>>>>> Update RBI files for rubocop.
 =======
   def find_end_range(node); end
 >>>>>>> Update RBI files for rubocop.
@@ -9585,6 +9787,7 @@ class RuboCop::Cop::Style::MethodCallWithArgsParentheses < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -9593,6 +9796,8 @@ class RuboCop::Cop::Style::MethodCallWithArgsParentheses < ::RuboCop::Cop::Base
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 
@@ -9604,6 +9809,7 @@ class RuboCop::Cop::Style::MethodCallWithArgsParentheses < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -9614,6 +9820,8 @@ class RuboCop::Cop::Style::MethodCallWithArgsParentheses < ::RuboCop::Cop::Base
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 end
@@ -10083,6 +10291,7 @@ class RuboCop::Cop::Style::NestedParenthesizedCalls < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -10091,6 +10300,8 @@ class RuboCop::Cop::Style::NestedParenthesizedCalls < ::RuboCop::Cop::Base
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 
@@ -10102,6 +10313,7 @@ class RuboCop::Cop::Style::NestedParenthesizedCalls < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -10112,6 +10324,8 @@ class RuboCop::Cop::Style::NestedParenthesizedCalls < ::RuboCop::Cop::Base
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 end
@@ -11394,6 +11608,7 @@ class RuboCop::Cop::Style::SingleLineMethods < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   def correct_to_endless(corrector, node); end
   def correct_to_endless?(body_node); end
   def correct_to_multiline(corrector, node); end
@@ -11419,6 +11634,11 @@ class RuboCop::Cop::Style::SingleLineMethods < ::RuboCop::Cop::Base
   def correct_to_endless?(body_node); end
   def correct_to_multiline(corrector, node); end
 >>>>>>> brew vendor-gems: commit updates.
+=======
+  def correct_to_endless(corrector, node); end
+  def correct_to_endless?(body_node); end
+  def correct_to_multiline(corrector, node); end
+>>>>>>> Update RBI files for rubocop.
 =======
   def correct_to_endless(corrector, node); end
   def correct_to_endless?(body_node); end
@@ -13587,6 +13807,7 @@ class RuboCop::TargetRuby::RubyVersionFile < ::RuboCop::TargetRuby::Source
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -13595,6 +13816,8 @@ class RuboCop::TargetRuby::RubyVersionFile < ::RuboCop::TargetRuby::Source
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
   def filename; end
@@ -13606,6 +13829,7 @@ end
 RuboCop::TargetRuby::RubyVersionFile::RUBY_VERSION_FILENAME = T.let(T.unsafe(nil), String)
 
 RuboCop::TargetRuby::RubyVersionFile::RUBY_VERSION_PATTERN = T.let(T.unsafe(nil), Regexp)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13628,6 +13852,8 @@ RuboCop::TargetRuby::RubyVersionFile::FILENAME = T.let(T.unsafe(nil), String)
 >>>>>>> brew vendor-gems: commit updates.
 =======
 >>>>>>> Update RBI files for rubocop.
+=======
+>>>>>>> Update RBI files for rubocop.
 
 class RuboCop::TargetRuby::Source
   def initialize(config); end
@@ -13643,6 +13869,7 @@ end
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -13651,6 +13878,8 @@ end
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 class RuboCop::TargetRuby::ToolVersionsFile < ::RuboCop::TargetRuby::RubyVersionFile
@@ -13671,6 +13900,7 @@ RuboCop::TargetRuby::ToolVersionsFile::TOOL_VERSIONS_PATTERN = T.let(T.unsafe(ni
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> Update RBI files for rubocop.
 =======
@@ -13681,6 +13911,8 @@ RuboCop::TargetRuby::ToolVersionsFile::TOOL_VERSIONS_PATTERN = T.let(T.unsafe(ni
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
 RuboCop::Token = RuboCop::AST::Token
@@ -13727,6 +13959,7 @@ end
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
 >>>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
@@ -13739,5 +13972,7 @@ end
 >>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> brew vendor-gems: commit updates.
+=======
+>>>>>>> Update RBI files for rubocop.
 =======
 >>>>>>> Update RBI files for rubocop.
