@@ -106,10 +106,14 @@ GEM
       rspec (>= 3, < 4)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     rubocop (1.8.0)
 =======
     rubocop (1.7.0)
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
+=======
+    rubocop (1.7.0)
+>>>>>>> build(deps): bump rubocop from 1.5.1 to 1.7.0 in /Library/Homebrew
 =======
     rubocop (1.7.0)
 >>>>>>> build(deps): bump rubocop from 1.5.1 to 1.7.0 in /Library/Homebrew
