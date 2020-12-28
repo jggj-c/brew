@@ -18,7 +18,11 @@ module Homebrew
         If no <previous_tag> is provided it defaults to the latest tag.
         If no <end_ref> is provided it defaults to `origin/master`.
 
+<<<<<<< HEAD
         If `--markdown` and a <previous_tag> are passed, an extra line containing
+=======
+        If `--markdown` and a <previous_tag> are passed, an extra line containg
+>>>>>>> release-notes: show warning on recent major/minor tag
         a link to the Homebrew blog will be adding to the output. Additionally,
         a warning will be shown if the latest minor release was less than one month ago.
       EOS
@@ -35,12 +39,20 @@ module Homebrew
     previous_tag = args.named.first
 
     if previous_tag.present?
+<<<<<<< HEAD
       most_recent_major_minor_tag = previous_tag.sub(/\d+$/, "0")
       one_month_ago = Date.today << 1
       previous_tag_date = Date.parse Utils.popen_read(
         "git", "-C", HOMEBREW_REPOSITORY, "log", "-1", "--format=%aI", most_recent_major_minor_tag
       )
       opoo "The latest major/minor release was less than one month ago." if previous_tag_date > one_month_ago
+=======
+
+      previous_tag_date = Date.parse Utils.popen_read(
+        "git", "-C", HOMEBREW_REPOSITORY, "log", "-1", "--format=%aI", previous_tag.sub(/\d+$/, "0")
+      )
+      opoo "The latest major/minor release was less than one month ago." if previous_tag_date > (Date.today << 1)
+>>>>>>> release-notes: show warning on recent major/minor tag
     end
 
     previous_tag ||= Utils.popen_read(
