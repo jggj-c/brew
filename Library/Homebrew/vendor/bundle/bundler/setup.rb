@@ -94,6 +94,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ruby-progressbar-1.11
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/unicode-display_width-1.7.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.1/lib"
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
 =======
