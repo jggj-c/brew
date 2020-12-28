@@ -103,6 +103,7 @@ GEM
     rspec-wait (0.0.9)
       rspec (>= 3, < 4)
 <<<<<<< HEAD
+<<<<<<< HEAD
     rubocop (1.8.1)
 =======
 <<<<<<< HEAD
@@ -111,6 +112,9 @@ GEM
     rubocop (1.7.0)
 >>>>>>> build(deps): bump rubocop from 1.5.1 to 1.7.0 in /Library/Homebrew
 >>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
+=======
+    rubocop (1.7.0)
+>>>>>>> build(deps): bump rubocop from 1.5.1 to 1.7.0 in /Library/Homebrew
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
