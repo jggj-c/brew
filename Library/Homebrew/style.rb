@@ -137,10 +137,14 @@ module Homebrew
       ruby_args = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         RUBY_PATH,
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
 =======
+>>>>>>> style: output warnings on debug/verbose.
+=======
+        RUBY_PATH,
 >>>>>>> style: output warnings on debug/verbose.
         (ENV["HOMEBREW_RUBY_WARNINGS"] if !debug && !verbose),
         "-S",
@@ -159,12 +163,16 @@ module Homebrew
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         system cache_env, RUBY_PATH, *ruby_args, *args
 =======
         system cache_env, *ruby_args, *args
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
 =======
         system cache_env, RUBY_PATH, *ruby_args, *args
+>>>>>>> style: output warnings on debug/verbose.
+=======
+        system cache_env, *ruby_args, *args
 >>>>>>> style: output warnings on debug/verbose.
         $CHILD_STATUS.success?
       when :json
