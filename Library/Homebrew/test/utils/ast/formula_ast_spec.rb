@@ -3,9 +3,9 @@
 
 require "utils/ast"
 
-describe Utils::AST do
-  let(:initial_formula) do
-    <<~RUBY
+describe Utils::AST::FormulaAST do
+  subject(:formula_ast) do
+    described_class.new <<~RUBY
       class Foo < Formula
         url "https://brew.sh/foo-1.0.tar.gz"
         license all_of: [
@@ -17,8 +17,9 @@ describe Utils::AST do
     RUBY
   end
 
-  describe ".replace_formula_stanza!" do
+  describe "#replace_stanza" do
     it "replaces the specified stanza in a formula" do
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast_spec.rb
       contents = initial_formula.dup
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,6 +31,10 @@ describe Utils::AST do
       described_class.replace_formula_stanza!(contents, :license, :public_domain)
 >>>>>>> utils/ast: add `stanza_text` helper function
       expect(contents).to eq <<~RUBY
+=======
+      formula_ast.replace_stanza(:license, :public_domain)
+      expect(formula_ast.process).to eq <<~RUBY
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
         class Foo < Formula
           url "https://brew.sh/foo-1.0.tar.gz"
           license :public_domain
@@ -38,8 +43,9 @@ describe Utils::AST do
     end
   end
 
-  describe ".add_formula_stanza!" do
+  describe "#add_stanza" do
     it "adds the specified stanza to a formula" do
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast_spec.rb
       contents = initial_formula.dup
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +57,10 @@ describe Utils::AST do
       described_class.add_formula_stanza!(contents, :revision, 1)
 >>>>>>> utils/ast: add `stanza_text` helper function
       expect(contents).to eq <<~RUBY
+=======
+      formula_ast.add_stanza(:revision, 1)
+      expect(formula_ast.process).to eq <<~RUBY
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
         class Foo < Formula
           url "https://brew.sh/foo-1.0.tar.gz"
           license all_of: [
@@ -64,6 +74,7 @@ describe Utils::AST do
     end
   end
 
+<<<<<<< HEAD:Library/Homebrew/test/utils/ast_spec.rb
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -118,6 +129,9 @@ describe Utils::AST do
 =======
 >>>>>>> utils/ast: add `stanza_text` helper function
   describe ".add_bottle_stanza!" do
+=======
+  describe "#add_bottle_block" do
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324:Library/Homebrew/test/utils/ast/formula_ast_spec.rb
     let(:bottle_output) do
       <<~RUBY.chomp.indent(2)
         bottle do
@@ -127,8 +141,8 @@ describe Utils::AST do
     end
 
     context "when `license` is a string" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
             license "MIT"
@@ -150,14 +164,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` after `license`" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when `license` is a symbol" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
             license :cannot_represent
@@ -179,14 +193,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` after `license`" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when `license` is multiline" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
             license all_of: [
@@ -216,14 +230,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` after `license`" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when `head` is a string" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
             head "https://brew.sh/foo.git"
@@ -245,14 +259,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` after `head`" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when `head` is a block" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
 
@@ -280,14 +294,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` before `head`" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when there is a comment on the same line" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz" # comment
           end
@@ -307,14 +321,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` after the comment" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when the next line is a comment" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
             # comment
@@ -336,14 +350,14 @@ describe Utils::AST do
       end
 
       it "adds `bottle` after the comment" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
 
     context "when the next line is blank and the one after it is a comment" do
-      let(:formula_contents) do
-        <<~RUBY.chomp
+      subject(:formula_ast) do
+        described_class.new <<~RUBY.chomp
           class Foo < Formula
             url "https://brew.sh/foo-1.0.tar.gz"
 
@@ -367,8 +381,8 @@ describe Utils::AST do
       end
 
       it "adds `bottle` before the comment" do
-        described_class.add_bottle_stanza!(formula_contents, bottle_output)
-        expect(formula_contents).to eq(new_contents)
+        formula_ast.add_bottle_block(bottle_output)
+        expect(formula_ast.process).to eq(new_contents)
       end
     end
   end

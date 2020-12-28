@@ -52,6 +52,7 @@ module Homebrew
         Homebrew.install_bundler_gems!
         require "utils/ast"
 
+<<<<<<< HEAD
         Utils::Inreplace.inreplace(formula.path) do |s|
           s = s.inreplace_string
           if current_revision.zero?
@@ -71,7 +72,15 @@ module Homebrew
             Utils::AST.replace_formula_stanza!(s, :revision, new_revision)
 >>>>>>> utils/ast: add `stanza_text` helper function
           end
+=======
+        formula_ast = Utils::AST::FormulaAST.new(formula.path.read)
+        if current_revision.zero?
+          formula_ast.add_stanza(:revision, new_revision)
+        else
+          formula_ast.replace_stanza(:revision, new_revision)
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
         end
+        formula.path.atomic_write(formula_ast.process)
       end
 
       message = "#{formula.name}: revision bump #{args.message}"

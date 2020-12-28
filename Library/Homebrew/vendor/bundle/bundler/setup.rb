@@ -58,8 +58,8 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/parallel-1.20.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/parallel_tests-3.4.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/parser-3.0.0.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rainbow-3.0.0/lib"
-$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-runtime-0.5.6205/lib"
-$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/parlour-4.0.1/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-runtime-0.5.6206/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/parlour-5.0.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/patchelf-1.3.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/plist-3.6.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/pry-0.13.1/lib"
@@ -78,12 +78,17 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-github-2.3.1/li
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-its-1.3.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-retry-0.6.2/lib"
 <<<<<<< HEAD
+<<<<<<< HEAD
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6205-universal-darwin-14/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6205/lib"
 =======
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6189-universal-darwin-14/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6189/lib"
 >>>>>>> brew vendor-gems: commit updates.
+=======
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6206-universal-darwin-14/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6206/lib"
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-sorbet-1.8.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-wait-0.0.9/lib"
 <<<<<<< HEAD
@@ -93,6 +98,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-wait-0.0.9/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-ast-1.4.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ruby-progressbar-1.11.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/unicode-display_width-2.0.0/lib"
+<<<<<<< HEAD
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.8.0/lib"
 =======
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6189-universal-darwin-14/lib"
@@ -123,6 +129,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.1/lib"
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
 =======
+=======
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.8.1/lib"
+>>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.2/lib"
 >>>>>>> brew vendor-gems: commit updates.
 =======
@@ -138,4 +147,4 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ruby-macho-2.5.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-runtime-stub-0.2.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/thor-1.0.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/spoom-1.0.7/lib"
-$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/tapioca-0.4.10/lib"
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/tapioca-0.4.11/lib"
