@@ -141,6 +141,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         RUBY_PATH,
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
@@ -156,6 +157,8 @@ module Homebrew
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
         RUBY_PATH,
+>>>>>>> style: output warnings on debug/verbose.
+=======
 >>>>>>> style: output warnings on debug/verbose.
 =======
 >>>>>>> style: output warnings on debug/verbose.
@@ -180,6 +183,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         system cache_env, RUBY_PATH, *ruby_args, *args
 =======
         system cache_env, *ruby_args, *args
@@ -198,6 +202,9 @@ module Homebrew
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
         system cache_env, *ruby_args, *args
+>>>>>>> style: output warnings on debug/verbose.
+=======
+        system cache_env, RUBY_PATH, *ruby_args, *args
 >>>>>>> style: output warnings on debug/verbose.
 =======
         system cache_env, RUBY_PATH, *ruby_args, *args
