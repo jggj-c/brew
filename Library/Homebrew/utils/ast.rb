@@ -17,6 +17,7 @@ module Utils
     class << self
       extend T::Sig
 
+<<<<<<< HEAD
       sig { params(body_node: Node).returns(T::Array[Node]) }
       def body_children(body_node)
         if body_node.nil?
@@ -45,10 +46,17 @@ module Utils
       end
 
       sig { params(formula_contents: String, bottle_output: String).void }
+=======
+      def replace_bottle_stanza!(formula_contents, bottle_output)
+        replace_formula_stanza!(formula_contents, :bottle, bottle_output.strip, type: :block_call)
+      end
+
+>>>>>>> utils/ast: cleanup
       def add_bottle_stanza!(formula_contents, bottle_output)
         add_formula_stanza!(formula_contents, :bottle, "\n#{bottle_output.chomp}", type: :block_call)
       end
 
+<<<<<<< HEAD
       sig do
         params(
           formula_contents: String,
@@ -59,10 +67,16 @@ module Utils
       end
       def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
         processed_source, children = process_formula(formula_contents)
+=======
+      def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
+        processed_source, body_node = process_formula(formula_contents)
+        children = body_node.begin_type? ? body_node.children.compact : [body_node]
+>>>>>>> utils/ast: cleanup
         stanza_node = children.find { |child| call_node_match?(child, name: name, type: type) }
         raise "Could not find #{name} stanza!" if stanza_node.nil?
 
         tree_rewriter = Parser::Source::TreeRewriter.new(processed_source.buffer)
+<<<<<<< HEAD
         tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
         formula_contents.replace(tree_rewriter.process)
       end
@@ -77,6 +91,14 @@ module Utils
       end
       def add_formula_stanza!(formula_contents, name, value, type: nil)
         processed_source, children = process_formula(formula_contents)
+=======
+        tree_rewriter.replace(stanza_node.source_range, replacement)
+        formula_contents.replace(tree_rewriter.process)
+      end
+
+      def add_formula_stanza!(formula_contents, name, text, type: nil)
+        processed_source, body_node = process_formula(formula_contents)
+>>>>>>> utils/ast: cleanup
 
         preceding_component = if children.length > 1
           children.reduce do |previous_child, current_child|
