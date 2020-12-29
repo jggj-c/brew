@@ -28,6 +28,7 @@ This is all that really matters:
   support every possible optional feature for the software.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - When bottles aren't required or affected, use the GitHub squash & merge workflow for a single-formula PR or rebase & merge workflow for a multiple-formulae PR. See [below](#how-to-merge-without-bottles) for more details.
 =======
 - Use the GitHub squash & merge or rebase & merge workflows where bottles aren't required.
@@ -35,6 +36,9 @@ This is all that really matters:
 =======
 - When bottles aren't required or affected, use the GitHub squash & merge workflow for a single-formula PR or rebase & merge workflow for a multiple-formulae PR. See [below](#how-to-merge-without-bottles) for more details.
 >>>>>>> docs: clarify GitHub merge workflow usage
+=======
+- Use the GitHub squash & merge or rebase & merge workflows where bottles aren't required.
+>>>>>>> docs: clarify squash/merge vs rebase/merge
 - Use `brew pr-publish` or `brew pr-pull` otherwise, which adds messages to auto-close pull requests and pull bottles built by the Brew Test Bot.
 - Thank people for contributing.
 
@@ -110,6 +114,7 @@ Here’s a flowchart for managing a PR which is ready to merge:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #### How to merge without bottles
 
 Here are guidelines about when to use squash & merge versus rebase & merge. These options should only be used with PRs where bottles are not needed or affected.
@@ -121,6 +126,9 @@ Here are guidelines about when to use squash & merge versus rebase & merge. Thes
 
 Here are guidelines about when to use squash & merge versus rebase & merge. These options should only be used with PRs where bottles are not needed or affected.
 >>>>>>> docs: clarify GitHub merge workflow usage
+=======
+Here are guidelines about when to use squash & merge versus rebase & merge. These options should only be used when bottles are not needed.
+>>>>>>> docs: clarify squash/merge vs rebase/merge
 
 | | PR modified a single formula | PR modifies multiple formulae |
 |---|---|---|
