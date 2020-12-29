@@ -159,6 +159,7 @@ module Utils
         stanza(:bottle, type: :block_call)
       end
 
+<<<<<<< HEAD
       sig { params(name: Symbol, type: T.nilable(Symbol)).returns(T.nilable(Node)) }
       def stanza(name, type: nil)
         children.find { |child| call_node_match?(child, name: name, type: type) }
@@ -221,10 +222,17 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> brew vendor-gems: commit updates.
+=======
+      def replace_bottle_stanza!(formula_contents, bottle_output)
+        replace_formula_stanza!(formula_contents, :bottle, bottle_output.strip, type: :block_call)
+      end
+
+>>>>>>> utils/ast: cleanup
       def add_bottle_stanza!(formula_contents, bottle_output)
         add_formula_stanza!(formula_contents, :bottle, "\n#{bottle_output.chomp}", type: :block_call)
       end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       sig do
         params(
@@ -241,6 +249,9 @@ module Utils
 =======
       def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
 <<<<<<< HEAD
+=======
+      def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
+>>>>>>> utils/ast: cleanup
         processed_source, body_node = process_formula(formula_contents)
         children = body_node.begin_type? ? body_node.children.compact : [body_node]
 >>>>>>> utils/ast: cleanup
@@ -251,6 +262,7 @@ module Utils
         raise "Could not find #{name} stanza!" if stanza_node.nil?
 
         tree_rewriter = Parser::Source::TreeRewriter.new(processed_source.buffer)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
@@ -277,6 +289,13 @@ module Utils
 
       def add_formula_stanza!(formula_contents, name, text, type: nil)
 <<<<<<< HEAD
+=======
+        tree_rewriter.replace(stanza_node.source_range, replacement)
+        formula_contents.replace(tree_rewriter.process)
+      end
+
+      def add_formula_stanza!(formula_contents, name, text, type: nil)
+>>>>>>> utils/ast: cleanup
         processed_source, body_node = process_formula(formula_contents)
 >>>>>>> utils/ast: cleanup
 =======

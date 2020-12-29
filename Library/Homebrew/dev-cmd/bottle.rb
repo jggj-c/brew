@@ -538,11 +538,16 @@ module Homebrew
               output = bottle_output bottle
             end
             puts output
+<<<<<<< HEAD
             Utils::AST.replace_bottle_stanza!(formula_contents, output)
+=======
+            Utils::AST.replace_bottle_stanza!(s.inreplace_string, output)
+>>>>>>> utils/ast: cleanup
           else
             odie "--keep-old was passed but there was no existing bottle block!" if args.keep_old?
             puts output
             update_or_add = "add"
+<<<<<<< HEAD
 <<<<<<< HEAD
             Utils::AST.add_bottle_stanza!(s.inreplace_string, output)
 >>>>>>> utils/ast: cleanup
@@ -555,6 +560,9 @@ module Homebrew
 >>>>>>> bottle: add `old_checksums` helper function
             Utils::AST.add_bottle_stanza!(formula_contents, output)
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
+=======
+            Utils::AST.add_bottle_stanza!(s.inreplace_string, output)
+>>>>>>> utils/ast: cleanup
           end
 =======
 >>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
