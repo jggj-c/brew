@@ -70,17 +70,24 @@ We now accept versioned formulae as long as they [meet the requirements](Version
 ### Merging, rebasing, cherry-picking
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Merging should be done in the `Homebrew/brew` repository to preserve history and GPG commit signing.
+=======
+Merging should be done in the `Homebrew/brew` repository to preserve history & GPG commit signing.
+>>>>>>> docs: further clarify merging workflows
 
 PRs modifying formulae that don't need bottles or making changes that don't
 require new bottles to be pulled should use GitHub's squash & merge or rebase & merge workflows.
 See the [table below](#how-to-merge-without-bottles) for more details.
 
+<<<<<<< HEAD
 =======
 Merging should be done in the `Homebrew/brew` repository to preserve history & GPG commit signing,
 and squash/merge or rebase/merge via GitHub should be used for formulae where those formulae
 don't need bottles or the change does not require new bottles to be pulled.
 >>>>>>> docs: clarify squash/merge vs rebase/merge
+=======
+>>>>>>> docs: further clarify merging workflows
 Otherwise, you should use `brew pr-pull` (or `rebase`/`cherry-pick` contributions).
 
 Don’t `rebase` until you finally `push`. Once `master` is pushed, you can’t
