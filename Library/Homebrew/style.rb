@@ -135,6 +135,10 @@ module Homebrew
       FileUtils.rm_rf cache_env["XDG_CACHE_HOME"] if reset_cache
 
       ruby_args = [
+<<<<<<< HEAD
+=======
+        RUBY_PATH,
+>>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
         (ENV["HOMEBREW_RUBY_WARNINGS"] if !debug && !verbose),
         "-S",
         "rubocop",
@@ -150,7 +154,11 @@ module Homebrew
 
         args << "--color" if Tty.color?
 
+<<<<<<< HEAD
         system cache_env, RUBY_PATH, *ruby_args, *args
+=======
+        system cache_env, *ruby_args, *args
+>>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
         $CHILD_STATUS.success?
       when :json
         result = system_command RUBY_PATH,

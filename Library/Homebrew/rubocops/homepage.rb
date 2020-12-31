@@ -90,8 +90,11 @@ module RuboCop
             return if node.nil?
 
             homepage = string_content(node).dup
+<<<<<<< HEAD
             return if homepage.nil? || homepage.empty?
 
+=======
+>>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0
             homepage.sub!("readthedocs.org", "readthedocs.io")
             homepage.delete_suffix!(".git") if homepage.start_with?("https://github.com")
             corrector.replace(node.source_range, "\"#{homepage}\"")
