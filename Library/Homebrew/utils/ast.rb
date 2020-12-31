@@ -165,6 +165,7 @@ module Utils
         children.find { |child| call_node_match?(child, name: name, type: type) }
       end
 
+<<<<<<< HEAD
       sig { params(bottle_output: String).void }
       def replace_bottle_block(bottle_output)
         replace_stanza(:bottle, bottle_output.chomp, type: :block_call)
@@ -191,11 +192,28 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> brew vendor-gems: commit updates.
+=======
+      def body_children(body_node)
+        if body_node.nil?
+          []
+        elsif body_node.begin_type?
+          body_node.children.compact
+        else
+          [body_node]
+        end
+      end
+
+      def bottle_block(formula_contents)
+        formula_stanza(formula_contents, :bottle, type: :block_call)
+      end
+
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
       def formula_stanza(formula_contents, name, type: nil)
         _, children = process_formula(formula_contents)
         children.find { |child| call_node_match?(child, name: name, type: type) }
       end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       sig { params(formula_contents: String, bottle_output: String).void }
 =======
@@ -223,6 +241,8 @@ module Utils
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> brew vendor-gems: commit updates.
 =======
+=======
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
       def replace_bottle_stanza!(formula_contents, bottle_output)
         replace_formula_stanza!(formula_contents, :bottle, bottle_output.strip, type: :block_call)
       end
@@ -251,10 +271,14 @@ module Utils
 <<<<<<< HEAD
 =======
       def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
+<<<<<<< HEAD
 >>>>>>> utils/ast: cleanup
         processed_source, body_node = process_formula(formula_contents)
         children = body_node.begin_type? ? body_node.children.compact : [body_node]
 >>>>>>> utils/ast: cleanup
+=======
+        processed_source, children = process_formula(formula_contents)
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
 =======
         processed_source, children = process_formula(formula_contents)
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
@@ -288,6 +312,7 @@ module Utils
       end
 
       def add_formula_stanza!(formula_contents, name, text, type: nil)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         tree_rewriter.replace(stanza_node.source_range, replacement)
@@ -394,6 +419,10 @@ module Utils
 
       sig { params(name: Symbol, value: T.any(Numeric, String, Symbol), type: T.nilable(Symbol)).void }
       def add_stanza(name, value, type: nil)
+=======
+        processed_source, children = process_formula(formula_contents)
+
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
         preceding_component = if children.length > 1
           children.reduce do |previous_child, current_child|
             if formula_component_before_target?(current_child,
