@@ -628,6 +628,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       old_value = old_bottle_spec.send(key).to_s
       new_value = new_values[key].to_s
       next if key == :cellar && old_value == "any" && new_value == "any_skip_relocation"
@@ -643,11 +644,17 @@ module Homebrew
       new_value = new_values[key].to_s
       next if key == :cellar && old_value == "any" && new_value == "any_skip_relocation"
 >>>>>>> bottle: add tests for `merge_bottle_spec`
+=======
+      old_value = old_bottle_spec.send(key).to_s
+      new_value = new_values[key].to_s
+      next if key == :cellar && old_value == "any" && new_value == "any_skip_relocation"
+>>>>>>> bottle: add tests for `merge_bottle_spec`
       next if old_value.present? && new_value == old_value
 
       mismatches << "#{key}: old: #{old_value.inspect}, new: #{new_value.inspect}"
     end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     return [mismatches, checksums] if old_keys.exclude? :sha256
@@ -657,6 +664,9 @@ module Homebrew
 =======
     return [mismatches, checksums] if old_keys.exclude? :sha256
 >>>>>>> bottle: add `old_checksums` helper function
+=======
+    return [mismatches, checksums] unless old_keys.include? :sha256
+>>>>>>> bottle: add tests for `merge_bottle_spec`
 
     old_bottle_spec.collector.each_key do |tag|
       old_value = old_bottle_spec.collector[tag].hexdigest
