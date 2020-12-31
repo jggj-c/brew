@@ -503,6 +503,7 @@ module Homebrew
 
         Utils::Inreplace.inreplace(path) do |s|
 <<<<<<< HEAD
+<<<<<<< HEAD
           formula_contents = s.inreplace_string
           case update_or_add
           when "update"
@@ -511,10 +512,16 @@ module Homebrew
             Utils::AST.add_bottle_stanza!(formula_contents, output)
 =======
           if s.inreplace_string.include? "bottle do"
+=======
+          formula_contents = s.inreplace_string
+          bottle_node = Utils::AST.bottle_block(formula_contents)
+          if bottle_node.present?
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
             update_or_add = "update"
             if args.keep_old?
+              old_keys = Utils::AST.body_children(bottle_node.body).map(&:method_name)
               old_bottle_spec = Formulary.factory(path).bottle_specification
-              mismatches, checksums = merge_bottle_spec(old_bottle_spec, bottle_hash["bottle"])
+              mismatches, checksums = merge_bottle_spec(old_keys, old_bottle_spec, bottle_hash["bottle"])
               if mismatches.present?
                 odie <<~EOS
                   --keep-old was passed but there are changes in:
@@ -525,13 +532,17 @@ module Homebrew
               output = bottle_output bottle
             end
             puts output
-            Utils::AST.replace_bottle_stanza!(s.inreplace_string, output)
+            Utils::AST.replace_bottle_stanza!(formula_contents, output)
           else
             odie "--keep-old was passed but there was no existing bottle block!" if args.keep_old?
             puts output
             update_or_add = "add"
+<<<<<<< HEAD
             Utils::AST.add_bottle_stanza!(s.inreplace_string, output)
 >>>>>>> utils/ast: cleanup
+=======
+            Utils::AST.add_bottle_stanza!(formula_contents, output)
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
           end
         end
 
@@ -568,9 +579,15 @@ module Homebrew
     old_keys.each do |key|
       next if key == :sha256
 
+<<<<<<< HEAD
       old_value = old_bottle_spec.send(key).to_s
       new_value = new_values[key].to_s
       next if key == :cellar && old_value == "any" && new_value == "any_skip_relocation"
+=======
+      old_value = old_bottle_spec.send(key)
+      new_value = new_values[key]
+      next if key == :cellar && old_value == :any && new_value == :any_skip_relocation
+>>>>>>> bottle: check actual bottle block contents when `--keep-old`
       next if old_value.present? && new_value == old_value
 
       mismatches << "#{key}: old: #{old_value.inspect}, new: #{new_value.inspect}"
