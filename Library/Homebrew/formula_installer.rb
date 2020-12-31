@@ -265,8 +265,12 @@ class FormulaInstaller
         #{formula}: no bottle available!
 =======
       message = <<~EOS
+<<<<<<< HEAD
         #{formula}: unable to pour bottle!
 >>>>>>> formula_installer: improve no-bottle error message
+=======
+        #{formula}: no bottle available!
+>>>>>>> formula_installer: use existing no bottle text.
       EOS
       if !formula.pour_bottle? && formula.pour_bottle_check_unsatisfied_reason
         message += formula.pour_bottle_check_unsatisfied_reason
