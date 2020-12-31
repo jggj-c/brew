@@ -81,6 +81,7 @@ We now accept versioned formulae as long as they [meet the requirements](Version
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Merging should be done in the `Homebrew/brew` repository to preserve history and GPG commit signing.
 =======
 Merging should be done in the `Homebrew/brew` repository to preserve history & GPG commit signing.
@@ -91,6 +92,9 @@ Merging should be done in the `Homebrew/brew` repository to preserve history and
 =======
 Merging should be done in the `Homebrew/brew` repository to preserve history & GPG commit signing.
 >>>>>>> docs: further clarify merging workflows
+=======
+Merging should be done in the `Homebrew/brew` repository to preserve history and GPG commit signing.
+>>>>>>> docs: use and instead of &
 
 PRs modifying formulae that don't need bottles or making changes that don't
 require new bottles to be pulled should use GitHub's squash & merge or rebase & merge workflows.
