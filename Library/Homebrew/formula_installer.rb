@@ -1,5 +1,5 @@
-# typed: false
-# frozen_string_literal: true
+ typed: false
+zen_string_literal: true
 
 require "cxxstdlib"
 require "formula"
@@ -26,7 +26,7 @@ require "unlink"
 
 # Installer for a formula.
 #
-# @api private
+ @api private
 class FormulaInstaller
   extend T::Sig
 
@@ -243,6 +243,9 @@ class FormulaInstaller
        ENV["HOMEBREW_TEST_TMPDIR"].nil? &&
        !pour_bottle?
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> formula_installer: tweak no-bottle error message
       message = if !formula.pour_bottle? && formula.pour_bottle_check_unsatisfied_reason
         formula_message = formula.pour_bottle_check_unsatisfied_reason
         formula_message[0] = formula_message[0].downcase
@@ -252,6 +255,7 @@ class FormulaInstaller
         <<~EOS
           #{formula}: no bottle available!
         EOS
+<<<<<<< HEAD
       end
       message += <<~EOS
         You can try to install from source with:
@@ -265,6 +269,11 @@ class FormulaInstaller
       message += <<~EOS
         You can try to install from source with e.g.
 >>>>>>> formula_installer: improve no-bottle error message
+=======
+      end
+      message += <<~EOS
+        You can try to install from source with:
+>>>>>>> formula_installer: tweak no-bottle error message
           brew install --build-from-source #{formula}
         Please note building from source is unsupported. You will encounter build
         failures with some formulae. If you experience any issues please create pull

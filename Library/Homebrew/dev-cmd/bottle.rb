@@ -1,5 +1,5 @@
-# typed: false
-# frozen_string_literal: true
+ typed: false
+ frozen_string_literal: true
 
 require "formula"
 require "utils/bottles"
@@ -13,7 +13,7 @@ require "utils/ast"
 
 BOTTLE_ERB = <<-EOS
   bottle do
-    <% if root_url != "#{HOMEBREW_BOTTLE_DEFAULT_DOMAIN}/bottles" %>
+    <% if root_url != "${HOMEBREW_BOTTLE_DEFAULT_DOMAIN}/bottles" %>
     root_url "<%= root_url %>"
     <% end %>
     <% if ![HOMEBREW_DEFAULT_PREFIX,
