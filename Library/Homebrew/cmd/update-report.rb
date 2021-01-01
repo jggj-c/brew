@@ -102,10 +102,14 @@ module Homebrew
 
       new_tag = Utils.popen_read(
 <<<<<<< HEAD
+<<<<<<< HEAD
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname", "*.*"
 =======
         "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname"
 >>>>>>> update-report: use gitconfig to remember last tag
+=======
+        "git", "-C", HOMEBREW_REPOSITORY, "tag", "--list", "--sort=-version:refname", "*.*"
+>>>>>>> cmd/update-report: fix to show new tag
       ).lines.first.chomp
 
       if new_tag != old_tag
