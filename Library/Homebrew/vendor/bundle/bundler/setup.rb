@@ -130,6 +130,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> jggj-c
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
@@ -166,6 +167,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.1/lib"
 >>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.2/lib"
+>>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-rails-2.9.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-rspec-2.1.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-sorbet-0.5.1/lib"
