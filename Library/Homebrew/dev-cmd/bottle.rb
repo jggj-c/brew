@@ -494,9 +494,13 @@ module Homebrew
         require "utils/ast"
 
         path = Pathname.new((HOMEBREW_REPOSITORY/bottle_hash["formula"]["path"]).to_s)
+<<<<<<< HEAD
         formula = Formulary.factory(path)
         formula_ast = Utils::AST::FormulaAST.new(path.read)
         checksums = old_checksums(formula, formula_ast, bottle_hash, args: args)
+=======
+        checksums = old_checksums(path, bottle_hash, args: args)
+>>>>>>> bottle: add `old_checksums` helper function
         update_or_add = checksums.nil? ? "add" : "update"
 
         checksums&.each(&bottle.method(:sha256))
@@ -520,6 +524,7 @@ module Homebrew
           if s.inreplace_string.include? "bottle do"
 =======
           formula_contents = s.inreplace_string
+<<<<<<< HEAD
 <<<<<<< HEAD
           bottle_node = Utils::AST.bottle_block(formula_contents)
           if bottle_node.present?
@@ -575,6 +580,12 @@ module Homebrew
             Utils::AST.add_bottle_stanza!(s.inreplace_string, output)
 >>>>>>> utils/ast: cleanup
 =======
+=======
+          case update_or_add
+          when "update"
+            Utils::AST.replace_bottle_stanza!(formula_contents, output)
+          when "add"
+>>>>>>> bottle: add `old_checksums` helper function
             Utils::AST.add_bottle_stanza!(formula_contents, output)
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
           end
@@ -657,6 +668,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     return [mismatches, checksums] if old_keys.exclude? :sha256
 =======
     return [mismatches, checksums] unless old_keys.include? :sha256
@@ -667,6 +679,9 @@ module Homebrew
 =======
     return [mismatches, checksums] unless old_keys.include? :sha256
 >>>>>>> bottle: add tests for `merge_bottle_spec`
+=======
+    return [mismatches, checksums] if old_keys.exclude? :sha256
+>>>>>>> bottle: add `old_checksums` helper function
 
     old_bottle_spec.collector.each_key do |tag|
       old_value = old_bottle_spec.collector[tag].hexdigest
@@ -681,8 +696,13 @@ module Homebrew
     [mismatches, checksums]
   end
 
+<<<<<<< HEAD
   def old_checksums(formula, formula_ast, bottle_hash, args:)
     bottle_node = formula_ast.bottle_block
+=======
+  def old_checksums(formula_path, bottle_hash, args:)
+    bottle_node = Utils::AST.bottle_block(formula_path.read)
+>>>>>>> bottle: add `old_checksums` helper function
     if bottle_node.nil?
       odie "--keep-old was passed but there was no existing bottle block!" if args.keep_old?
       return
@@ -690,7 +710,11 @@ module Homebrew
     return [] unless args.keep_old?
 
     old_keys = Utils::AST.body_children(bottle_node.body).map(&:method_name)
+<<<<<<< HEAD
     old_bottle_spec = formula.bottle_specification
+=======
+    old_bottle_spec = Formulary.factory(formula_path).bottle_specification
+>>>>>>> bottle: add `old_checksums` helper function
     mismatches, checksums = merge_bottle_spec(old_keys, old_bottle_spec, bottle_hash["bottle"])
     if mismatches.present?
       odie <<~EOS
