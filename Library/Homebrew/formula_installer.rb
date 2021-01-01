@@ -245,6 +245,9 @@ class FormulaInstaller
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> formula_installer: tweak no-bottle error message
 =======
 >>>>>>> formula_installer: tweak no-bottle error message
       message = if !formula.pour_bottle? && formula.pour_bottle_check_unsatisfied_reason
@@ -256,6 +259,7 @@ class FormulaInstaller
         <<~EOS
           #{formula}: no bottle available!
         EOS
+<<<<<<< HEAD
 <<<<<<< HEAD
       end
       message += <<~EOS
@@ -278,6 +282,11 @@ class FormulaInstaller
       message += <<~EOS
         You can try to install from source with e.g.
 >>>>>>> formula_installer: improve no-bottle error message
+=======
+      end
+      message += <<~EOS
+        You can try to install from source with:
+>>>>>>> formula_installer: tweak no-bottle error message
 =======
       end
       message += <<~EOS
