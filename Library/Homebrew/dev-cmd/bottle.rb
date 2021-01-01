@@ -514,6 +514,7 @@ module Homebrew
           if s.inreplace_string.include? "bottle do"
 =======
           formula_contents = s.inreplace_string
+<<<<<<< HEAD
           bottle_node = Utils::AST.bottle_block(formula_contents)
           if bottle_node.present?
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
@@ -541,6 +542,12 @@ module Homebrew
             Utils::AST.add_bottle_stanza!(s.inreplace_string, output)
 >>>>>>> utils/ast: cleanup
 =======
+=======
+          case update_or_add
+          when "update"
+            Utils::AST.replace_bottle_stanza!(formula_contents, output)
+          when "add"
+>>>>>>> bottle: add `old_checksums` helper function
             Utils::AST.add_bottle_stanza!(formula_contents, output)
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
           end
@@ -600,10 +607,14 @@ module Homebrew
     end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return [mismatches, checksums] if old_keys.exclude? :sha256
 =======
     return [mismatches, checksums] unless old_keys.include? :sha256
 >>>>>>> bottle: add tests for `merge_bottle_spec`
+=======
+    return [mismatches, checksums] if old_keys.exclude? :sha256
+>>>>>>> bottle: add `old_checksums` helper function
 
     old_bottle_spec.collector.each_key do |tag|
       old_value = old_bottle_spec.collector[tag].hexdigest
