@@ -60,7 +60,7 @@ module Utils
 =======
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
       def replace_bottle_stanza!(formula_contents, bottle_output)
-        replace_formula_stanza!(formula_contents, :bottle, bottle_output.strip, type: :block_call)
+        replace_formula_stanza!(formula_contents, :bottle, bottle_output.chomp, type: :block_call)
       end
 
 >>>>>>> utils/ast: cleanup
@@ -93,6 +93,7 @@ module Utils
 
         tree_rewriter = Parser::Source::TreeRewriter.new(processed_source.buffer)
 <<<<<<< HEAD
+<<<<<<< HEAD
         tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
         formula_contents.replace(tree_rewriter.process)
       end
@@ -117,6 +118,13 @@ module Utils
         processed_source, body_node = process_formula(formula_contents)
 >>>>>>> utils/ast: cleanup
 =======
+=======
+        tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
+        formula_contents.replace(tree_rewriter.process)
+      end
+
+      def add_formula_stanza!(formula_contents, name, value, type: nil)
+>>>>>>> utils/ast: add `stanza_text` helper function
         processed_source, children = process_formula(formula_contents)
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
 
@@ -159,22 +167,45 @@ module Utils
       def stanza_text(name, value, indent: nil)
         text = if value.is_a?(String)
           _, node = process_source(value)
+<<<<<<< HEAD
           value if (node.is_a?(SendNode) || node.is_a?(BlockNode)) && node.method_name == name
+=======
+          value if (node.send_type? || node.block_type?) && node.method_name == name
+>>>>>>> utils/ast: add `stanza_text` helper function
         end
         text ||= "#{name} #{value.inspect}"
         text = text.indent(indent) if indent && !text.match?(/\A\n* +/)
         text
       end
+<<<<<<< HEAD
 
       private
+=======
+
+      private
+
+      def process_source(source)
+        Homebrew.install_bundler_gems!
+        require "rubocop-ast"
+>>>>>>> utils/ast: add `stanza_text` helper function
 
       sig { params(source: String).returns([ProcessedSource, Node]) }
       def process_source(source)
         ruby_version = Version.new(HOMEBREW_REQUIRED_RUBY_VERSION).major_minor.to_f
+<<<<<<< HEAD
         processed_source = ProcessedSource.new(source, ruby_version)
         root_node = processed_source.ast
         [processed_source, root_node]
       end
+=======
+        processed_source = RuboCop::AST::ProcessedSource.new(source, ruby_version)
+        root_node = processed_source.ast
+        [processed_source, root_node]
+      end
+
+      def process_formula(formula_contents)
+        processed_source, root_node = process_source(formula_contents)
+>>>>>>> utils/ast: add `stanza_text` helper function
 
       sig { params(formula_contents: String).returns([ProcessedSource, T::Array[Node]]) }
       def process_formula(formula_contents)

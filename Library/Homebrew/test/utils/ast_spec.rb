@@ -21,10 +21,14 @@ describe Utils::AST do
     it "replaces the specified stanza in a formula" do
       contents = initial_formula.dup
 <<<<<<< HEAD
+<<<<<<< HEAD
       described_class.replace_formula_stanza!(contents, :license, :public_domain)
 =======
       described_class.replace_formula_stanza!(contents, :license, "license :public_domain")
 >>>>>>> utils/ast: cleanup
+=======
+      described_class.replace_formula_stanza!(contents, :license, :public_domain)
+>>>>>>> utils/ast: add `stanza_text` helper function
       expect(contents).to eq <<~RUBY
         class Foo < Formula
           url "https://brew.sh/foo-1.0.tar.gz"
@@ -38,10 +42,14 @@ describe Utils::AST do
     it "adds the specified stanza to a formula" do
       contents = initial_formula.dup
 <<<<<<< HEAD
+<<<<<<< HEAD
       described_class.add_formula_stanza!(contents, :revision, 1)
 =======
       described_class.add_formula_stanza!(contents, :revision, "revision 1")
 >>>>>>> utils/ast: cleanup
+=======
+      described_class.add_formula_stanza!(contents, :revision, 1)
+>>>>>>> utils/ast: add `stanza_text` helper function
       expect(contents).to eq <<~RUBY
         class Foo < Formula
           url "https://brew.sh/foo-1.0.tar.gz"
@@ -57,6 +65,9 @@ describe Utils::AST do
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> utils/ast: add `stanza_text` helper function
   describe ".stanza_text" do
     let(:compound_license) do
       <<~RUBY.chomp
@@ -101,8 +112,11 @@ describe Utils::AST do
     end
   end
 
+<<<<<<< HEAD
 =======
 >>>>>>> utils/ast: cleanup
+=======
+>>>>>>> utils/ast: add `stanza_text` helper function
   describe ".add_bottle_stanza!" do
     let(:bottle_output) do
       <<~RUBY.chomp.indent(2)
