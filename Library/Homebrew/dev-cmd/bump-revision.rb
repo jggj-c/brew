@@ -61,6 +61,7 @@ module Homebrew
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Utils::AST.add_formula_stanza!(s, :revision, new_revision)
           else
             Utils::AST.replace_formula_stanza!(s, :revision, new_revision)
@@ -79,6 +80,11 @@ module Homebrew
           else
             Utils::AST.replace_formula_stanza!(s, :revision, text)
 >>>>>>> utils/ast: cleanup
+=======
+            Utils::AST.add_formula_stanza!(s, :revision, new_revision)
+          else
+            Utils::AST.replace_formula_stanza!(s, :revision, new_revision)
+>>>>>>> utils/ast: add `stanza_text` helper function
           end
 =======
 >>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3

@@ -244,7 +244,7 @@ module Utils
 =======
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
       def replace_bottle_stanza!(formula_contents, bottle_output)
-        replace_formula_stanza!(formula_contents, :bottle, bottle_output.strip, type: :block_call)
+        replace_formula_stanza!(formula_contents, :bottle, bottle_output.chomp, type: :block_call)
       end
 
 >>>>>>> utils/ast: cleanup
@@ -289,6 +289,7 @@ module Utils
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
         formula_contents.replace(tree_rewriter.process)
       end
@@ -324,6 +325,13 @@ module Utils
         processed_source, body_node = process_formula(formula_contents)
 >>>>>>> utils/ast: cleanup
 =======
+=======
+        tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
+        formula_contents.replace(tree_rewriter.process)
+      end
+
+      def add_formula_stanza!(formula_contents, name, value, type: nil)
+>>>>>>> utils/ast: add `stanza_text` helper function
 =======
         tree_rewriter.replace(stanza_node.source_range, stanza_text(name, replacement, indent: 2).lstrip)
         formula_contents.replace(tree_rewriter.process)
@@ -453,10 +461,15 @@ module Utils
           end
         end
 
+<<<<<<< HEAD
         tree_rewriter.insert_after(preceding_expr, "\n#{stanza_text(name, value, indent: 2)}")
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+        tree_rewriter = Parser::Source::TreeRewriter.new(processed_source.buffer)
+        tree_rewriter.insert_after(preceding_expr, "\n#{stanza_text(name, value, indent: 2)}")
+>>>>>>> utils/ast: add `stanza_text` helper function
         formula_contents.replace(tree_rewriter.process)
       end
 
@@ -464,6 +477,7 @@ module Utils
       def stanza_text(name, value, indent: nil)
         text = if value.is_a?(String)
           _, node = process_source(value)
+<<<<<<< HEAD
 <<<<<<< HEAD
           value if (node.is_a?(SendNode) || node.is_a?(BlockNode)) && node.method_name == name
 =======
@@ -477,10 +491,14 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> brew vendor-gems: commit updates.
+=======
+          value if (node.send_type? || node.block_type?) && node.method_name == name
+>>>>>>> utils/ast: add `stanza_text` helper function
         end
         text ||= "#{name} #{value.inspect}"
         text = text.indent(indent) if indent && !text.match?(/\A\n* +/)
         text
+<<<<<<< HEAD
 =======
 >>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
 >>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
@@ -488,12 +506,16 @@ module Utils
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      end
+>>>>>>> utils/ast: add `stanza_text` helper function
 
       private
 =======
 =======
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 
+<<<<<<< HEAD
       private
 =======
 =======
@@ -504,6 +526,8 @@ module Utils
 
       private
 
+=======
+>>>>>>> utils/ast: add `stanza_text` helper function
       def process_source(source)
         Homebrew.install_bundler_gems!
         require "rubocop-ast"
@@ -540,17 +564,26 @@ module Utils
       def process_source(source)
         ruby_version = Version.new(HOMEBREW_REQUIRED_RUBY_VERSION).major_minor.to_f
 <<<<<<< HEAD
+<<<<<<< HEAD
         processed_source = ProcessedSource.new(source, ruby_version)
         root_node = processed_source.ast
         [processed_source, root_node]
       end
 =======
+=======
+>>>>>>> utils/ast: add `stanza_text` helper function
         processed_source = RuboCop::AST::ProcessedSource.new(source, ruby_version)
         root_node = processed_source.ast
         [processed_source, root_node]
       end
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+      def process_formula(formula_contents)
+        processed_source, root_node = process_source(formula_contents)
+>>>>>>> utils/ast: add `stanza_text` helper function
 
       def process_formula(formula_contents)
 >>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3
