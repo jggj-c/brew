@@ -92,6 +92,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ruby-progressbar-1.11
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/unicode-display_width-1.7.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> jggj-c
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.2/lib"
 =======

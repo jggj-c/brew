@@ -438,7 +438,10 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
   def old_name; end
   def violated?; end
   def warning?; end
+<<<<<<< HEAD
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> jggj-c
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 end
 
@@ -525,6 +528,7 @@ end
 class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRule
   def initialize(config, old_name, metadata); end
 
+<<<<<<< HEAD
 =======
 end
 
@@ -567,14 +571,20 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
   def initialize(config, old_name, metadata); end
 
 >>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
+=======
+>>>>>>> jggj-c
   def metadata; end
   def old_name; end
   def rule_message; end
 
+<<<<<<< HEAD
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
 >>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+>>>>>>> jggj-c
   private
 
   def alternatives; end
@@ -3574,7 +3584,10 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 
   private
 
+<<<<<<< HEAD
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> jggj-c
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
   def offense_range(node, begin_pos); end
   def reference_variable_with_brackets?(node); end
@@ -3584,11 +3597,14 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def register_offense(range); end
   def space_before_brackets?(node, first_argument); end
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD
 =======
   def offense_range(node, first_argument, begin_pos); end
   def register_offense(range); end
   def space_before_brackets?(node, first_argument); end
 >>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
+=======
+>>>>>>> jggj-c
 end
 
 RuboCop::Cop::Layout::SpaceBeforeBrackets::MSG = T.let(T.unsafe(nil), String)
