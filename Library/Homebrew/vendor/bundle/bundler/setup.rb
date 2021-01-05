@@ -138,6 +138,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> jggj-c
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
@@ -159,6 +160,10 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.8.1/lib"
 >>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
 =======
+=======
+=======
+>>>>>>> jggj-c
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> brew vendor-gems: commit updates.
 >>>>>>> 6e9393c04700f224399e5a30fb5a9b6dc7e704e3

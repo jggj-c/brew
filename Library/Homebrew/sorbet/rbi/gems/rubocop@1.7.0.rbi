@@ -537,6 +537,7 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.
@@ -562,6 +563,11 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> jggj-c
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
@@ -686,6 +692,7 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -788,6 +795,8 @@ class RuboCop::ConfigObsoletion::ParameterRule < ::RuboCop::ConfigObsoletion::Ru
 
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 =======
 end
 
@@ -913,6 +922,7 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 >>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
 =======
 >>>>>>> jggj-c
+<<<<<<< HEAD
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
 =======
@@ -944,10 +954,13 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
   def metadata; end
   def old_name; end
   def rule_message; end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -983,6 +996,8 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 <<<<<<< HEAD
 >>>>>>> Update RBI files for rubocop.
 =======
+=======
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
@@ -990,6 +1005,7 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> jggj-c
+<<<<<<< HEAD
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
 =======
@@ -1021,6 +1037,8 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
   private
 
   def alternatives; end
@@ -4066,6 +4084,7 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 >>>>>>> Update RBI files for rubocop.
@@ -4090,6 +4109,11 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+=======
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> jggj-c
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD
@@ -4112,7 +4136,10 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 =======
   def offense_range(node, first_argument, begin_pos); end
   def register_offense(range); end
@@ -4127,6 +4154,7 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
 >>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
 =======
 >>>>>>> jggj-c
+<<<<<<< HEAD
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
 >>>>>>> jggj-c/dependabot/bundler/Library/Homebrew/rubocop-1.7.0:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
@@ -4199,6 +4227,8 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def space_before_brackets?(node, first_argument); end
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 >>>>>>> Update RBI files for rubocop.
+=======
+>>>>>>> build(deps): bump nokogiri from 1.10.10 to 1.11.0 in /Library/Homebrew
 end
 
 RuboCop::Cop::Layout::SpaceBeforeBrackets::MSG = T.let(T.unsafe(nil), String)
