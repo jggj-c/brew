@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 github:
 <<<<<<< Updated upstream
   client_id: "${client_id}"
@@ -23,6 +24,13 @@ codecov:
   ci:
     - "travis.org"
     - "jgj-c.xyz"
+=======
+codecov:
+  token: "${CODECOV_TOKEN}"
+  bot: "codecov-io"
+  ci:
+    - "travis.org"
+>>>>>>> Create codecov.yml
   strict_yaml_branch: "yaml-config"
   max_report_age: 24
   disable_default_path_fixes: no
@@ -30,7 +38,10 @@ codecov:
   notify:
     after_n_builds: 2
     wait_for_ci: yes
+<<<<<<< HEAD
 parsers:
   v1:
     include_full_missed_files: true  # default false
 runs-on: self-hoste
+=======
+>>>>>>> Create codecov.yml
