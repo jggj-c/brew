@@ -17,7 +17,10 @@ module Utils
     class << self
       extend T::Sig
 
+<<<<<<< HEAD
       sig { params(body_node: Node).returns(T::Array[Node]) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def body_children(body_node)
         if body_node.nil?
           []
@@ -28,27 +31,40 @@ module Utils
         end
       end
 
+<<<<<<< HEAD
       sig { params(formula_contents: String).returns(T.nilable(Node)) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def bottle_block(formula_contents)
         formula_stanza(formula_contents, :bottle, type: :block_call)
       end
 
+<<<<<<< HEAD
       sig { params(formula_contents: String, name: Symbol, type: T.nilable(Symbol)).returns(T.nilable(Node)) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def formula_stanza(formula_contents, name, type: nil)
         _, children = process_formula(formula_contents)
         children.find { |child| call_node_match?(child, name: name, type: type) }
       end
 
+<<<<<<< HEAD
       sig { params(formula_contents: String, bottle_output: String).void }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def replace_bottle_stanza!(formula_contents, bottle_output)
         replace_formula_stanza!(formula_contents, :bottle, bottle_output.chomp, type: :block_call)
       end
 
+<<<<<<< HEAD
       sig { params(formula_contents: String, bottle_output: String).void }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def add_bottle_stanza!(formula_contents, bottle_output)
         add_formula_stanza!(formula_contents, :bottle, "\n#{bottle_output.chomp}", type: :block_call)
       end
 
+<<<<<<< HEAD
       sig do
         params(
           formula_contents: String,
@@ -57,6 +73,8 @@ module Utils
           type:             T.nilable(Symbol),
         ).void
       end
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
         processed_source, children = process_formula(formula_contents)
         stanza_node = children.find { |child| call_node_match?(child, name: name, type: type) }
@@ -67,6 +85,7 @@ module Utils
         formula_contents.replace(tree_rewriter.process)
       end
 
+<<<<<<< HEAD
       sig do
         params(
           formula_contents: String,
@@ -75,6 +94,8 @@ module Utils
           type:             T.nilable(Symbol),
         ).void
       end
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def add_formula_stanza!(formula_contents, name, value, type: nil)
         processed_source, children = process_formula(formula_contents)
 
@@ -117,22 +138,45 @@ module Utils
       def stanza_text(name, value, indent: nil)
         text = if value.is_a?(String)
           _, node = process_source(value)
+<<<<<<< HEAD
           value if (node.is_a?(SendNode) || node.is_a?(BlockNode)) && node.method_name == name
+=======
+          value if (node.send_type? || node.block_type?) && node.method_name == name
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
         end
         text ||= "#{name} #{value.inspect}"
         text = text.indent(indent) if indent && !text.match?(/\A\n* +/)
         text
       end
+<<<<<<< HEAD
 
       private
+=======
+
+      private
+
+      def process_source(source)
+        Homebrew.install_bundler_gems!
+        require "rubocop-ast"
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 
       sig { params(source: String).returns([ProcessedSource, Node]) }
       def process_source(source)
         ruby_version = Version.new(HOMEBREW_REQUIRED_RUBY_VERSION).major_minor.to_f
+<<<<<<< HEAD
         processed_source = ProcessedSource.new(source, ruby_version)
         root_node = processed_source.ast
         [processed_source, root_node]
       end
+=======
+        processed_source = RuboCop::AST::ProcessedSource.new(source, ruby_version)
+        root_node = processed_source.ast
+        [processed_source, root_node]
+      end
+
+      def process_formula(formula_contents)
+        processed_source, root_node = process_source(formula_contents)
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 
       sig { params(formula_contents: String).returns([ProcessedSource, T::Array[Node]]) }
       def process_formula(formula_contents)

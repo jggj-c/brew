@@ -9,6 +9,7 @@ require "formula_versions"
 require "cli/parser"
 require "utils/inreplace"
 require "erb"
+require "utils/ast"
 
 BOTTLE_ERB = <<-EOS
   bottle do
