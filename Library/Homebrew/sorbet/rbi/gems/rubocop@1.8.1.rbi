@@ -440,10 +440,13 @@ class RuboCop::ConfigObsoletion::CopRule < ::RuboCop::ConfigObsoletion::Rule
   def violated?; end
   def warning?; end
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 =======
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
+=======
+>>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 end
 
 RuboCop::ConfigObsoletion::DEFAULT_RULES_FILE = T.let(T.unsafe(nil), String)
@@ -529,6 +532,7 @@ end
 class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRule
   def initialize(config, old_name, metadata); end
 
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 =======
 end
 
@@ -628,10 +632,13 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
   def metadata; end
   def old_name; end
   def rule_message; end
 
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
@@ -643,6 +650,9 @@ class RuboCop::ConfigObsoletion::RemovedCop < ::RuboCop::ConfigObsoletion::CopRu
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
 =======
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+>>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
   private
 
   def alternatives; end
@@ -3643,6 +3653,7 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   private
 
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 <<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
@@ -3660,6 +3671,8 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def space_before_brackets?(node, first_argument); end
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
 =======
+=======
+>>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
   def offense_range(node, begin_pos); end
   def reference_variable_with_brackets?(node); end
   def register_offense(range); end
@@ -3668,12 +3681,15 @@ class RuboCop::Cop::Layout::SpaceBeforeBrackets < ::RuboCop::Cop::Base
   def register_offense(range); end
   def space_before_brackets?(node, first_argument); end
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+<<<<<<< HEAD:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.1.rbi
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f:Library/Homebrew/sorbet/rbi/gems/rubocop@1.5.1.rbi
 =======
   def offense_range(node, first_argument, begin_pos); end
   def register_offense(range); end
   def space_before_brackets?(node, first_argument); end
 >>>>>>> Update RBI files for rubocop.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.7.0.rbi
+=======
+>>>>>>> brew vendor-gems: commit updates.:Library/Homebrew/sorbet/rbi/gems/rubocop@1.8.0.rbi
 end
 
 RuboCop::Cop::Layout::SpaceBeforeBrackets::MSG = T.let(T.unsafe(nil), String)

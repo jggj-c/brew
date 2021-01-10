@@ -23,6 +23,7 @@ module Utils
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       sig { params(body_node: Node).returns(T::Array[Node]) }
 =======
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
@@ -31,6 +32,11 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+      sig { params(body_node: Node).returns(T::Array[Node]) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
       def body_children(body_node)
         if body_node.nil?
           []
@@ -54,6 +60,7 @@ module Utils
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       sig { params(formula_contents: String).returns(T.nilable(Node)) }
 =======
 <<<<<<< HEAD
@@ -61,6 +68,11 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+      sig { params(formula_contents: String).returns(T.nilable(Node)) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
       def bottle_block(formula_contents)
         formula_stanza(formula_contents, :bottle, type: :block_call)
 =======
@@ -78,6 +90,7 @@ module Utils
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       sig { params(formula_contents: String, name: Symbol, type: T.nilable(Symbol)).returns(T.nilable(Node)) }
 =======
 <<<<<<< HEAD
@@ -85,6 +98,11 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+      sig { params(formula_contents: String, name: Symbol, type: T.nilable(Symbol)).returns(T.nilable(Node)) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
       def formula_stanza(formula_contents, name, type: nil)
         _, children = process_formula(formula_contents)
         children.find { |child| call_node_match?(child, name: name, type: type) }
@@ -102,6 +120,7 @@ module Utils
       sig { params(formula_contents: String, bottle_output: String).void }
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
       def replace_bottle_stanza!(formula_contents, bottle_output)
@@ -112,6 +131,9 @@ module Utils
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
       def add_bottle_stanza!(formula_contents, bottle_output)
         add_formula_stanza!(formula_contents, :bottle, "\n#{bottle_output.chomp}", type: :block_call)
       end
@@ -309,10 +331,14 @@ module Utils
 =======
           value if (node.send_type? || node.block_type?) && node.method_name == name
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> utils/ast: add `stanza_text` helper function
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
         end
         text ||= "#{name} #{value.inspect}"
         text = text.indent(indent) if indent && !text.match?(/\A\n* +/)
@@ -322,6 +348,7 @@ module Utils
       end
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       private
 =======
@@ -330,8 +357,18 @@ module Utils
 
       private
 =======
+=======
+>>>>>>> brew vendor-gems: commit updates.
 
       private
+=======
+
+      private
+
+      def process_source(source)
+        Homebrew.install_bundler_gems!
+        require "rubocop-ast"
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 
 <<<<<<< HEAD
       def process_source(source)
@@ -357,6 +394,13 @@ module Utils
         root_node = processed_source.ast
         [processed_source, root_node]
       end
+<<<<<<< HEAD
+=======
+
+      def process_formula(formula_contents)
+        processed_source, root_node = process_source(formula_contents)
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
 
       def process_formula(formula_contents)
         processed_source, root_node = process_source(formula_contents)

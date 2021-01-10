@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 github:
 <<<<<<< Updated upstream
   client_id: "${client_id}"
@@ -14,6 +15,8 @@ github:
   client_id: "${client_id}"
   client_secret: "${HOMEBREW_GITHUB_API_TOKEN}"
 >>>>>>> master
+=======
+>>>>>>> brew vendor-gems: commit updates.
 codecov:
   token: "${CODECOV_TOKEN}, ${HOMEBREW_CODECOV_TOKEN}"
   bot: "codecov-io"

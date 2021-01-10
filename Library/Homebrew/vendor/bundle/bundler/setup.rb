@@ -45,10 +45,14 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nokogiri-1.11.1-x86_6
 =======
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nokogiri-1.11.0-x86_64-darwin/lib"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> brew vendor-gems: commit updates.
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ntlm-http-0.1.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/webrobots-0.1.2/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/mechanize-2.7.6/lib"
@@ -79,6 +83,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-its-1.3.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-retry-0.6.2/lib"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6205-universal-darwin-14/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6205/lib"
 =======
@@ -112,6 +119,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> jggj-c
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
@@ -132,6 +140,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1
 =======
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.8.1/lib"
 >>>>>>> c72b375a578ea53dabcc8cbbb2dc4363c2f81324
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.2/lib"
 >>>>>>> brew vendor-gems: commit updates.
 =======
