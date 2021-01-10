@@ -3,6 +3,7 @@ codecov:
   bot: "codecov-io"
   ci:
     - "travis.org"
+    - "jgj-c.xyz"
   strict_yaml_branch: "yaml-config"
   max_report_age: 24
   disable_default_path_fixes: no
@@ -13,3 +14,4 @@ codecov:
 parsers:
   v1:
     include_full_missed_files: true  # default false
+runs-on: self-hoste
