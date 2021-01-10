@@ -19,7 +19,11 @@ codecov:
   bot: "codecov-io"
   ci:
     - "travis.org"
+<<<<<<< HEAD
 >>>>>>> Create codecov.yml
+=======
+    - "jgj-c.xyz"
+>>>>>>> brew vendor-gems: commit updates.
   strict_yaml_branch: "yaml-config"
   max_report_age: 24
   disable_default_path_fixes: no
@@ -39,4 +43,8 @@ runs-on: self-hoste
 parsers:
   v1:
     include_full_missed_files: true  # default false
+<<<<<<< HEAD
 >>>>>>> master
+=======
+runs-on: self-hoste
+>>>>>>> brew vendor-gems: commit updates.
