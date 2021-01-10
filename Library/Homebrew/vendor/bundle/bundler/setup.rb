@@ -41,6 +41,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/mini_portile2-2.5.0/l
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/extensions/x86_64-darwin-14/2.6.0-static/racc-1.5.2"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/racc-1.5.2/lib"
 <<<<<<< HEAD
+<<<<<<< HEAD
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nokogiri-1.11.1-x86_64-darwin/lib"
 =======
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nokogiri-1.11.0-x86_64-darwin/lib"
@@ -52,6 +53,9 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nokogiri-1.11.0-x86_6
 >>>>>>> 05802623afd33b181473761d30b180f338e6278f
 =======
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> brew vendor-gems: commit updates.
+=======
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/nokogiri-1.11.0-x86_64-darwin/lib"
 >>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ntlm-http-0.1.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/webrobots-0.1.2/lib"
@@ -82,6 +86,7 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-github-2.3.1/li
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-its-1.3.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rspec-retry-0.6.2/lib"
 <<<<<<< HEAD
+<<<<<<< HEAD
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6206-universal-darwin-14/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6206/lib"
 =======
@@ -93,6 +98,8 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6206/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6205-universal-darwin-14/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6205/lib"
 =======
+=======
+>>>>>>> brew vendor-gems: commit updates.
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-static-0.5.6189-universal-darwin-14/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/sorbet-0.5.6189/lib"
 >>>>>>> brew vendor-gems: commit updates.
