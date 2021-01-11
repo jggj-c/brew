@@ -1,0 +1,4 @@
+Error: 3 failed steps!
+brew doctor
+brew audit --tap=homebrew/core
+brew bottle --merge --write --no-commit ./testbottest--0.1.catalina.bottle.json
