@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 github:
 <<<<<<< Updated upstream
   client_id: "${client_id}"
@@ -5,6 +6,8 @@ github:
   client_id: "jggj-c"
 >>>>>>> Stashed changes
   client_secret: "${HOMEBREW_GITHUB_API_TOKEN}"
+=======
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
 codecov:
   token: "${CODECOV_TOKEN}, ${HOMEBREW_CODECOV_TOKEN}"
   bot: "codecov-io"

@@ -19,9 +19,15 @@ module Utils
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       sig { params(body_node: Node).returns(T::Array[Node]) }
 =======
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
+=======
+      sig { params(body_node: Node).returns(T::Array[Node]) }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
       def body_children(body_node)
         if body_node.nil?
           []
@@ -35,7 +41,11 @@ module Utils
 <<<<<<< HEAD
       sig { params(formula_contents: String).returns(T.nilable(Node)) }
 =======
+<<<<<<< HEAD
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
       def bottle_block(formula_contents)
         formula_stanza(formula_contents, :bottle, type: :block_call)
       end
@@ -43,7 +53,11 @@ module Utils
 <<<<<<< HEAD
       sig { params(formula_contents: String, name: Symbol, type: T.nilable(Symbol)).returns(T.nilable(Node)) }
 =======
+<<<<<<< HEAD
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
       def formula_stanza(formula_contents, name, type: nil)
         _, children = process_formula(formula_contents)
         children.find { |child| call_node_match?(child, name: name, type: type) }
@@ -51,12 +65,16 @@ module Utils
 
 <<<<<<< HEAD
       sig { params(formula_contents: String, bottle_output: String).void }
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def replace_bottle_stanza!(formula_contents, bottle_output)
         replace_formula_stanza!(formula_contents, :bottle, bottle_output.chomp, type: :block_call)
       end
 
+<<<<<<< HEAD
       sig { params(formula_contents: String, bottle_output: String).void }
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> bottle: check actual bottle block contents when `--keep-old`
       def replace_bottle_stanza!(formula_contents, bottle_output)
@@ -64,6 +82,9 @@ module Utils
       end
 
 >>>>>>> utils/ast: cleanup
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
       def add_bottle_stanza!(formula_contents, bottle_output)
         add_formula_stanza!(formula_contents, :bottle, "\n#{bottle_output.chomp}", type: :block_call)
       end
@@ -77,6 +98,8 @@ module Utils
           type:             T.nilable(Symbol),
         ).void
       end
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def replace_formula_stanza!(formula_contents, name, replacement, type: nil)
         processed_source, children = process_formula(formula_contents)
 =======
@@ -98,6 +121,7 @@ module Utils
         formula_contents.replace(tree_rewriter.process)
       end
 
+<<<<<<< HEAD
       sig do
         params(
           formula_contents: String,
@@ -106,6 +130,8 @@ module Utils
           type:             T.nilable(Symbol),
         ).void
       end
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
       def add_formula_stanza!(formula_contents, name, value, type: nil)
         processed_source, children = process_formula(formula_contents)
 =======
@@ -171,18 +197,33 @@ module Utils
           value if (node.is_a?(SendNode) || node.is_a?(BlockNode)) && node.method_name == name
 =======
           value if (node.send_type? || node.block_type?) && node.method_name == name
+<<<<<<< HEAD
 >>>>>>> utils/ast: add `stanza_text` helper function
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
         end
         text ||= "#{name} #{value.inspect}"
         text = text.indent(indent) if indent && !text.match?(/\A\n* +/)
         text
       end
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+      private
+=======
+=======
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
 
       private
 =======
 
       private
+
+      def process_source(source)
+        Homebrew.install_bundler_gems!
+        require "rubocop-ast"
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 
       def process_source(source)
         Homebrew.install_bundler_gems!
@@ -205,7 +246,11 @@ module Utils
 
       def process_formula(formula_contents)
         processed_source, root_node = process_source(formula_contents)
+<<<<<<< HEAD
 >>>>>>> utils/ast: add `stanza_text` helper function
+=======
+>>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
+>>>>>>> 05802623afd33b181473761d30b180f338e6278f
 
       sig { params(formula_contents: String).returns([ProcessedSource, T::Array[Node]]) }
       def process_formula(formula_contents)
