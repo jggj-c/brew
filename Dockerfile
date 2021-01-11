@@ -1,6 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+>>>>>>> master
+=======
+<<<<<<< Updated upstream
 >>>>>>> master
 ARG version=20.04
 FROM ubuntu:$version
@@ -53,6 +57,9 @@ RUN cd /home/linuxbrew/.linuxbrew \
   && chown -R linuxbrew: /home/linuxbrew/.linuxbrew \
   && chmod -R g+w,o-w /home/linuxbrew/.linuxbrew
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 FROM ruby:2.5-slim
 
@@ -71,5 +78,8 @@ RUN bundle install
 
 CMD ["ruby", "homebrew.rb"]
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+=======
+>>>>>>> master
 =======
 >>>>>>> master
