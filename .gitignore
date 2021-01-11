@@ -184,5 +184,10 @@
 # Unignore tests' bundle config
 !/Library/Homebrew/test/.bundle/config
 
+<<<<<<< Updated upstream
 # Unignore vscode configuration
 !/.vscode
+=======
+
+./enterprise-resources
+>>>>>>> Stashed changes
