@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 Library/Homebrew/vendor/portable-ruby
 Library/Taps
@@ -27,3 +28,7 @@ Library/Taps
 **/values.dev.yaml
 README.md
 >>>>>>> Stashed changes
+=======
+Library/Homebrew/vendor/portable-ruby
+Library/Taps
+>>>>>>> master

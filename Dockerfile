@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> master
 ARG version=20.04
 FROM ubuntu:$version
 ARG DEBIAN_FRONTEND=noninteractive
@@ -49,6 +52,7 @@ RUN cd /home/linuxbrew/.linuxbrew \
   && rm -rf ~/.cache \
   && chown -R linuxbrew: /home/linuxbrew/.linuxbrew \
   && chmod -R g+w,o-w /home/linuxbrew/.linuxbrew
+<<<<<<< HEAD
 =======
 FROM ruby:2.5-slim
 
@@ -67,3 +71,5 @@ RUN bundle install
 
 CMD ["ruby", "homebrew.rb"]
 >>>>>>> Stashed changes
+=======
+>>>>>>> master
