@@ -116,7 +116,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
 
       - name: Build Docker image
-        run: docker build -t brew --build-arg=version=16.04 .
+        run: docker build -t brew --build-arg=version=20.04 .
 
       - name: Deploy the Docker image to GitHub Packages and Docker Hub
         if: github.ref == 'refs/heads/master'
