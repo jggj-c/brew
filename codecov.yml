@@ -15,7 +15,7 @@ codecov:
     - "jgj-c.xyz"
 =======
 codecov:
-  token: "${CODECOV_TOKEN}"
+  token: "${CODECOV_TOKEN}, ${HOMEBREW_CODECOV_TOKEN}"
   bot: "codecov-io"
   ci:
     - "travis.org"
