@@ -91,8 +91,12 @@ $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-ast-1.3.0/lib
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/ruby-progressbar-1.11.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/unicode-display_width-1.7.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-1.7.0/lib"
+<<<<<<< HEAD
 >>>>>>> 815859806c7c29663d178722358e79c2b2ae597b
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.2/lib"
+=======
+$:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-performance-1.9.1/lib"
+>>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-rails-2.9.1/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-rspec-2.1.0/lib"
 $:.unshift "#{path}/../#{ruby_engine}/#{ruby_version}/gems/rubocop-sorbet-0.5.1/lib"

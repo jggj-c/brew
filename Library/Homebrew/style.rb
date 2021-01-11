@@ -135,6 +135,10 @@ module Homebrew
       FileUtils.rm_rf cache_env["XDG_CACHE_HOME"] if reset_cache
 
       ruby_args = [
+<<<<<<< HEAD
+=======
+        RUBY_PATH,
+>>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9
         (ENV["HOMEBREW_RUBY_WARNINGS"] if !debug && !verbose),
         "-S",
         "rubocop",
@@ -150,7 +154,11 @@ module Homebrew
 
         args << "--color" if Tty.color?
 
+<<<<<<< HEAD
         system cache_env, RUBY_PATH, *ruby_args, *args
+=======
+        system cache_env, *ruby_args, *args
+>>>>>>> ee42c6ebec04363901a4ac01599c58c7261aa0c9
         $CHILD_STATUS.success?
       when :json
         result = system_command RUBY_PATH,
