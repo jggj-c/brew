@@ -1,5 +1,5 @@
 <<<<<<< Updated upstream
-name: test everything (macOS)
+name: macOS
 on:
   push:
     branches:
