@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # installed gems (should all be require: false)
 gem "byebug", require: false
 gem "codecov", require: false
-gem "nokogiri", require: false
+gem "nokogiri", ">= 1.11.4", require: false
 gem "parallel_tests", require: false
 gem "ronn", require: false
 gem "rspec", require: false
@@ -24,7 +24,7 @@ gem "tapioca", require: false
 # vendored gems
 gem "activesupport"
 gem "concurrent-ruby"
-gem "mechanize"
+gem "mechanize", ">= 2.7.6"
 gem "patchelf"
 gem "plist"
 gem "rubocop-performance"
