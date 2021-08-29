@@ -61,7 +61,7 @@ RUN cd /home/linuxbrew/.linuxbrew \
 =======
 >>>>>>> master
 =======
-FROM ruby:2.5-slim
+FROM ruby:2.6-slim
 
 LABEL Name=homebrew Version=0.0.1
 
